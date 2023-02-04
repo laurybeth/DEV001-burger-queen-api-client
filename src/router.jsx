@@ -1,30 +1,23 @@
-import { Login } from './components/Login'
+
 import React from 'react'
+import { Home } from './components/Home'
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route
 } from 'react-router-dom'
 // import reactLogo from './assets/react.svg'
-import './App.css'
 
-function App () {
-  // const [count, setCount] = useState(0)
-
-  const router = createBrowserRouter(
+function router () {
+  return createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Login />}>
-      </Route>
+        <Route path="/" element={<Home />}>
+        </Route>
     )
   )
-
-  return (<input
-    type="text"
-    placeholder=" User"
-      name='email'
-    />, router)
 }
-export default App
+export default router
+
 /*     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
