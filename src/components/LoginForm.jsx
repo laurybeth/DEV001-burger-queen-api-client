@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validateEmail, validateForm } from '../controllers/login-controller'
+import { validateForm } from '../controllers/login-controller'
 
 const initialForm = {
   id: null,
@@ -14,11 +14,29 @@ export function LoginForm () {
 
   function handleSubmit (e) {
     e.preventDefault()
-    console.log(form)
+    validateForm(form)
+      .then(() => {
+        console.log('exito: ', form)
+      })
+      .catch((error) => {
+        if (error.code === 'email') {
+          setErrorEmail(error.message)
+        }
+
+        if (error.code === 'password') {
+          setErrorPassword(error.message)
+        }
+      })
   }
 
   function handleChange (e) {
-    const { name } = e.target
+    const { name, value } = e.target
+    setForm(
+      {
+        ...form,
+        [name]: value
+      })
+    console.log('handle: ', form)
     if (name === 'email') {
       setErrorEmail('')
     }
@@ -28,14 +46,7 @@ export function LoginForm () {
   }
 
   function handleBlur (e) {
-    validateForm(e)
-      .then(
-        setForm(
-          {
-            ...form,
-            [e.target.name]: e.target.value
-          }
-        ))
+    validateForm(form)
       .catch((error) => {
         if (error.code === 'email') {
           setErrorEmail(error.message)
