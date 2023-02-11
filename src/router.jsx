@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Home } from './components/Home'
+import { WaiterPanel } from './components/WaiterPanel'
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,9 +11,11 @@ import {
 
 function router () {
   return createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Home />}>
-        </Route>
+    createRoutesFromElements(// o usar <routes></routes>
+      <>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/waiterPanel" element={<WaiterPanel />}></Route>
+      </>
     )
   )
 }

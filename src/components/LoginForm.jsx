@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { validateForm } from '../controllers/login-controller'
 
 const initialForm = {
@@ -8,6 +9,7 @@ const initialForm = {
 }
 
 export function LoginForm () {
+  const link = useNavigate()
   const [form, setForm] = useState(initialForm)
   const [errorEmail, setErrorEmail] = useState('')
   const [errorPassword, setErrorPassword] = useState('')
@@ -16,6 +18,7 @@ export function LoginForm () {
     e.preventDefault()
     validateForm(form)
       .then(() => {
+        link('/waiterPanel')
         console.log('exito: ', form)
       })
       .catch((error) => {
