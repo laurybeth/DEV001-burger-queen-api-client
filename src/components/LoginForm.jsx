@@ -18,6 +18,16 @@ export function LoginForm () {
   }
 
   function handleChange (e) {
+    const { name } = e.target
+    if (name === 'email') {
+      setErrorEmail('')
+    }
+    if (name === 'password') {
+      setErrorPassword('')
+    }
+  }
+
+  function handleBlur (e) {
     validateForm(e)
       .then(
         setForm(
@@ -43,13 +53,13 @@ export function LoginForm () {
               <div className='container-input'>
               <label htmlFor="email" className="form-label text-white">Email
               </label>
-              <input type="text" className="form-control form-input" name='email' placeholder="name@example.com" onChange={handleChange}/>
+              <input type="text" className="form-control form-input" name='email' placeholder="name@example.com" onChange = {handleChange} onBlur={handleBlur}/>
               <p className='errorMessage'>{errorEmail}</p>
               </div>
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
-              <input type="password" className="form-control form-input " name='password' placeholder="********" onChange={handleChange} />
+              <input type="password" className="form-control form-input " name='password' placeholder="********" onChange = {handleChange} onBlur={handleBlur} />
               <p className='errorMessage'>{errorPassword}</p>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
