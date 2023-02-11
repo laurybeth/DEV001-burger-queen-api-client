@@ -10,17 +10,17 @@ export function validateForm (e) {
     if (name === 'email') {
       if (!value.trim()) {
         // eslint-disable-next-line prefer-promise-reject-errors
-        reject({ name: 'email', message: 'Enter your email' })
+        reject({ code: 'email', message: 'Enter your email' })
       } else if (!validateEmail(value)) {
         // eslint-disable-next-line prefer-promise-reject-errors
-        reject({ name: 'email', message: 'The format does not match what was requested. Example: name@example.com' })
+        reject({ code: 'email', message: 'Invalid email. Example: name@example.com' })
       }
     }
 
     if (name === 'password') {
       if (!value.trim()) {
         // eslint-disable-next-line prefer-promise-reject-errors
-        reject({ name: 'password', message: 'Enter your password' })
+        reject({ code: 'password', message: 'Enter your password' })
       }
     }
     resolve(true)

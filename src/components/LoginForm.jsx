@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validateEmail } from '../controllers/login-controller'
+import { validateEmail, validateForm } from '../controllers/login-controller'
 
 const initialForm = {
   id: null,
@@ -9,7 +9,8 @@ const initialForm = {
 
 export function LoginForm () {
   const [form, setForm] = useState(initialForm)
-  const [warning, setWarning] = useState('')
+  const [errorEmail, setErrorEmail] = useState('')
+  const [errorPassword, setErrorPassword] = useState('')
 
   function handleSubmit (e) {
     e.preventDefault()
@@ -17,18 +18,23 @@ export function LoginForm () {
   }
 
   function handleChange (e) {
-    const email = e.target.value
-    console.log(e.target.name)
-    if ((!validateEmail(email)) && (e.target.name === 'email')) {
-      setWarning('The format does not match what was requested. Example: name@example.com')
-    } else {
-      setForm(
-        {
-          ...form,
-          [e.target.name]: e.target.value
+    validateForm(e)
+      .then(
+        setForm(
+          {
+            ...form,
+            [e.target.name]: e.target.value
+          }
+        ))
+      .catch((error) => {
+        if (error.code === 'email') {
+          setErrorEmail(error.message)
         }
-      )
-    }
+
+        if (error.code === 'password') {
+          setErrorPassword(error.message)
+        }
+      })
   }
 
   return (
@@ -38,13 +44,13 @@ export function LoginForm () {
               <label htmlFor="email" className="form-label text-white">Email
               </label>
               <input type="text" className="form-control form-input" name='email' placeholder="name@example.com" onChange={handleChange}/>
-              <p className='errorMessage'>{warning}</p>
+              <p className='errorMessage'>{errorEmail}</p>
               </div>
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
               <input type="password" className="form-control form-input " name='password' placeholder="********" onChange={handleChange} />
-              <p>{}</p>
+              <p className='errorMessage'>{errorPassword}</p>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
               <button type="submit" className="btn btn-primary btn-lg btn-login ">Login
