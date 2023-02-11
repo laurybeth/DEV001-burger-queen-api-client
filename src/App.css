@@ -29,6 +29,8 @@ height: 20vh;
 
 .card-body{
   background-image: url('./assets/bg2.jpg');
+  background-color: #000000;
+  background-repeat: no-repeat;
   background-size: cover; 
   width:100%;
   display: flex;
@@ -100,7 +102,8 @@ height: 35vh;
 
   .card-body{
     background-image: url('./assets/bg1.jpg');
-    background-size: cover
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 }
