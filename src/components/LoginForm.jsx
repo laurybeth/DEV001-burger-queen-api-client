@@ -12,18 +12,22 @@ export function LoginForm () {
   const [warning, setWarning] = useState('')
 
   function handleSubmit (e) {
-    setForm(
-      {
-        ...form,
-        [e.target.name]: e.target.value
-      }
-    )
+    e.preventDefault()
+    console.log(form)
   }
 
   function handleChange (e) {
     const email = e.target.value
-    if (!validateEmail(email)) {
+    console.log(e.target.name)
+    if ((!validateEmail(email)) && (e.target.name === 'email')) {
       setWarning('The format does not match what was requested. Example: name@example.com')
+    } else {
+      setForm(
+        {
+          ...form,
+          [e.target.name]: e.target.value
+        }
+      )
     }
   }
 
@@ -39,7 +43,7 @@ export function LoginForm () {
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
-              <input type="password" className="form-control form-input " name='password' placeholder="********" />
+              <input type="password" className="form-control form-input " name='password' placeholder="********" onChange={handleChange} />
               <p>{}</p>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
