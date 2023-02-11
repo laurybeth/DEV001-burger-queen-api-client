@@ -60,7 +60,7 @@ export function LoginForm () {
 
   return (
             <section className='container__login'>
-            <form className="d-grid gap-2 col-9 mx-auto" onSubmit={handleSubmit} >
+            <form className="d-grid gap-1 col-11 mx-auto" onSubmit={handleSubmit} >
               <div className='container-input'>
               <label htmlFor="email" className="form-label text-white">Email
               </label>
