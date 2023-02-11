@@ -49,10 +49,16 @@ font-weight: 400;
 
 }
 
+.container-input{
+  margin-bottom: 2rem;
+}
+
 .form-input{
- margin-bottom: 2rem;
+ 
  border: 1px solid #BF3A29;
 }
+
+
 select {
   font-family: 'Roboto', sans-serif;
 }
@@ -70,6 +76,12 @@ select {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.20);
 }
 
+.errorMessage{
+  color: #ff1e00;
+  font-size: 1rem;
+  text-align: right;
+}
+
 .card-footer {
   display:flex;
   align-items: center; 
@@ -82,7 +94,7 @@ select {
   border-radius: 0;
 }
 
-.footer-text{
+.footer-text {
 
   color: #BF3A29;
 }
