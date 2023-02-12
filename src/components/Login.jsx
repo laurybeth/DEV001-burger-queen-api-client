@@ -82,19 +82,19 @@ export function Login () {
   }
 
   return (
-            <section className='container__login'>
+            <section className='container-login'>
             <form className="d-grid gap-1 col-11 mx-auto" onSubmit={handleSubmit} >
               <div className='container-input'>
               <label htmlFor="email" className="form-label text-white">Email
               </label>
               <input type="text" className="form-control form-input" name='email' placeholder="name@example.com" onChange = {handleChange} onBlur={handleBlur}/>
-              <p className='errorMessage'>{errorEmail}</p>
+              <p className='error-message'>{errorEmail}</p>
               </div>
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
               <input type="password" className="form-control form-input " name='password' placeholder="********" onChange = {handleChange} onBlur={handleBlur} />
-              <p className='errorMessage'>{errorPassword}</p>
+              <p className='error-message'>{errorPassword}</p>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
               <button type="submit" className="btn btn-primary btn-lg btn-login ">Login
