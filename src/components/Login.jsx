@@ -8,7 +8,7 @@ const initialForm = {
   password: ''
 }
 
-export function LoginForm () {
+export function Login () {
   const link = useNavigate()
   const [form, setForm] = useState(initialForm)
   const [errorEmail, setErrorEmail] = useState('')

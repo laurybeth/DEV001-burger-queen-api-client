@@ -1,6 +1,6 @@
 import React from 'react'
 import { Footer } from './Footer'
-import { LoginForm } from './LoginForm'
+import { Login } from './Login'
 
 export function Home () {
   return (
@@ -9,7 +9,7 @@ export function Home () {
         <img className="logo" src='../assets/logo-shadow.png'></img>
       </div>
       <div className="card-body">
-       <LoginForm/>
+       <Login/>
       </div>
       <Footer/>
     </div>
