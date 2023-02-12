@@ -15,7 +15,8 @@
     "start": "npm run dev",
     "dev": "vite dev src",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "users-api": "json-server --watch src/api/auth.json --port 5000"
   },
   "repository": {
     "type": "git",
