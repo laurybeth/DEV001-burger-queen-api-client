@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Footer } from './Footer'
 import { LoginForm } from './LoginForm'
 
 export function Home () {
@@ -10,8 +11,7 @@ export function Home () {
       <div className="card-body">
        <LoginForm/>
       </div>
-      <div className="card-footer text-muted">
-         <div className='footer-text'>Copyright © 2023</div>
-      </div>
-      </div>)
+      <Footer/>
+    </div>
+  )
 }

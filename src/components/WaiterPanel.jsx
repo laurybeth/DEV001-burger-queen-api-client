@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
+import { Footer } from './Footer'
 
 export function WaiterPanel () {
-  return (<div/>)
+  return (
+  <div className='card'>
+
+  <Footer/>
+  </div>
+
+  )
 }
