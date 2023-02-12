@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { validateForm } from '../controllers/login-controller'
+import { httpRequest } from '../fetch-api/httpRequest'
+import { toast } from 'react-toastify'
 
 const initialForm = {
   id: null,
@@ -16,10 +18,28 @@ export function Login () {
 
   function handleSubmit (e) {
     e.preventDefault()
+
     validateForm(form)
       .then(() => {
-        link('/waiterPanel')
-        console.log('exito: ', form)
+        httpRequest().post('http://localhost:8080/login', {
+          method: 'POST',
+          body: form
+        })
+          .then((response) => {
+            // mensaje de error
+            if (!response.error) {
+              toast.success('Success')
+              link('/waiterPanel')
+            } else {
+              toast.error('Please Enter valid credentials')
+              console.log('Error: ', 'Credenciales incorrectos')
+            }
+
+            console.log('response', response)
+          })
+          .catch((error) => {
+            console.log('Error: ', error.message)
+          })
       })
       .catch((error) => {
         if (error.code === 'email') {

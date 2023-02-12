@@ -2,6 +2,7 @@
 export function httpRequest () {
   function customFetch (endPoint, options) {
     const defaultHeader = {
+      'Content-Type': 'application/json',
       accept: 'application/json'
     }
     const controller = new AbortController()
@@ -25,7 +26,7 @@ export function httpRequest () {
             message: response.statusText || 'Ups! Something happened'
           })
       )
-      .cath((error) => error)
+      .catch((error) => error)
   }
 
   function get (url, options = {}) {
