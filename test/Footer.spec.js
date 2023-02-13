@@ -3,10 +3,10 @@ import { render, screen } from '@testing-library/react'
 import { Footer } from '../src/components/Footer'
 
 describe('Footer', () => {
-  // eslint-disable-next-line jest/no-focused-tests
-  it.only('Should be', () => {
+  it.only('Should be a footer text', () => {
     render(<Footer/>)
-    const footer = screen.getByRole('div', { name: 'footer container' })
+    const footer = screen.getByText('Copyright © 2023 Burger Queen ®')
+
     expect(footer).toBeInTheDocument()
   })
 })

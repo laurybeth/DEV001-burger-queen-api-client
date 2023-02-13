@@ -2,7 +2,6 @@ import React from 'react'
 import { Footer } from './Footer'
 import { Login } from './Login'
 
-
 export function Home () {
   return (
     <div className="card">
