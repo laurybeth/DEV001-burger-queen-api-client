@@ -12,8 +12,6 @@ export function Home () {
        <Login/>
       </div>
       <Footer/>
-
     </div>
-
   )
 }
