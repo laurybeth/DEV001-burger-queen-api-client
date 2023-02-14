@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { validateForm } from '../controllers/login-controller'
+import { validateForm } from '../utils/validate'
 import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
 
