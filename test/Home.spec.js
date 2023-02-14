@@ -4,21 +4,26 @@ import { Home } from '../src/components/Home'
 import { MemoryRouter } from 'react-router-dom'
 
 describe('Home', () => {
+  let renderInstance
   beforeEach(() => {
-    render(
+    renderInstance = render(
     <MemoryRouter>
         <Home />
     </MemoryRouter>)
   })
 
-  it('Should have the Login component', () => {
+  it('Should render the Home component', () => {
+    expect(renderInstance).toBeTruthy()
+  })
+
+  it('Should render the Login component', () => {
     const LoginElement = screen.getByTestId('login-element')
     expect(LoginElement).toBeInTheDocument()
   })
 
-  it('Should have the Footer component', () => {
+  it('Should render the Footer component', () => {
     const FooterElement = screen.getByTestId('footer-element')
-    screen.debug()
+    // screen.debug()
     expect(FooterElement).toBeInTheDocument()
   })
 })
