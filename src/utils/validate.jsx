@@ -8,7 +8,7 @@ export function validateForm (form) {
     if (!form.email.trim()) {
       reject({ code: 'email', message: 'Enter your email' })
     } else if (!validateEmail(form.email)) {
-      reject({ code: 'email', message: 'Invalid email. Example: name@example.com' })
+      reject({ code: 'email', message: 'Invalid email. E.g. name@example.com' })
     }
     if (!form.password.trim()) {
       reject({ code: 'password', message: 'Enter your password' })

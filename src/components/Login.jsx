@@ -52,7 +52,7 @@ export function Login () {
         ...form,
         [name]: value
       })
-    console.log('handle: ', form)
+    // console.log('handle: ', form)
     if (name === 'email') {
       setErrorEmail('')
     }
@@ -94,6 +94,18 @@ export function Login () {
               </button>
               </div>
             </form>
+            <ToastContainer
+      position="bottom-left"
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      />
             </section>
 
   )
