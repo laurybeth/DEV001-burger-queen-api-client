@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/laurybeth/DEV001-burger-queen-api-client/issues"
   },
-  "homepage": "https://github.com/laurybeth/DEV001-burger-queen-api-client#readme",
+  "homepage": "https://laurybeth.github.io/DEV001-burger-queen-api-client",
   "dependencies": {
     "gh-pages": "^5.0.0",
     "htmlhint": "^1.1.4",
