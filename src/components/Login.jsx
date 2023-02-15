@@ -24,16 +24,12 @@ export function Login () {
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })
-      try {
-        // mensaje de error
-        if (!response.error) {
-          toast.success('Success')
-          link('/waiterPanel')
-        } else {
-          toast.error('Please enter valid credentials')
-        }
-      } catch (error) {
-        console.log('Error: ', error.message)
+      // mensaje de error
+      if (!response.error) {
+        toast.success('Success')
+        link('/waiterPanel')
+      } else {
+        toast.error('Please enter valid credentials')
       }
     } catch (error) {
       if (error.code === 'email') {

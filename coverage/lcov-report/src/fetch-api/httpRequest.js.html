@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/fetch-api/httpRequest.jsx</title>
+    <title>Code coverage report for src/fetch-api/httpRequest.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/fetch-api</a> httpRequest.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/fetch-api</a> httpRequest.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/21</span>
+                <span class='fraction'>0/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/18</span>
+                <span class='fraction'>0/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/9</span>
+                <span class='fraction'>0/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.15% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/19</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,22 +114,22 @@
 <a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,10 +146,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,27 +153,31 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable prefer-promise-reject-errors */
-export function httpRequest () {
-  function customFetch (endPoint, options) {
-    const defaultHeader = {
+export function <span class="fstat-no" title="function not covered" >httpRequest </span>() {
+  function <span class="fstat-no" title="function not covered" >customFetch </span>(endPoint, options) {
+    const defaultHeader = <span class="cstat-no" title="statement not covered" >{</span>
       'Content-Type': 'application/json',
       accept: 'application/json'
     }
-    const controller = new AbortController()
-    options.signal = controller.signal
-    options.method = options.method || <span class="branch-1 cbranch-no" title="branch not covered" >'GET'</span>
-    options.headers = options.headers
-      ? <span class="branch-0 cbranch-no" title="branch not covered" >{ ...defaultHeader, ...options.headers }</span>
+    const controller = <span class="cstat-no" title="statement not covered" >new AbortController()</span>
+<span class="cstat-no" title="statement not covered" >    options.signal = controller.signal</span>
+<span class="cstat-no" title="statement not covered" >    options.method = options.method || 'GET'</span>
+<span class="cstat-no" title="statement not covered" >    options.headers = options.headers</span>
+      ? { ...defaultHeader, ...options.headers }
       : defaultHeader
-    options.body = JSON.stringify(options.body) || <span class="branch-1 cbranch-no" title="branch not covered" >false</span>
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!options.body) <span class="cstat-no" title="statement not covered" >delete options.body</span>
+<span class="cstat-no" title="statement not covered" >    options.body = JSON.stringify(options.body) || false</span>
+<span class="cstat-no" title="statement not covered" >    if (!options.body) <span class="cstat-no" title="statement not covered" >delete options.body</span></span>
 &nbsp;
-    setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >controller.abort(),</span> 3000)
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >controller.abort(),</span> 3000)</span>
 &nbsp;
-    return fetch(endPoint, options)
+<span class="cstat-no" title="statement not covered" >    return fetch(endPoint, options)</span>
       .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt;
 <span class="cstat-no" title="statement not covered" >        response.ok</span>
           ? response.json()
@@ -193,9 +193,9 @@ export function httpRequest () {
   function <span class="fstat-no" title="function not covered" >get </span>(url, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
 <span class="cstat-no" title="statement not covered" >    return customFetch(url, options)</span>
   }
-  function post (url, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-    options.method = 'POST'
-    return customFetch(url, options)
+  function <span class="fstat-no" title="function not covered" >post </span>(url, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >    options.method = 'POST'</span>
+<span class="cstat-no" title="statement not covered" >    return customFetch(url, options)</span>
   }
   function <span class="fstat-no" title="function not covered" >put </span>(url, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
 <span class="cstat-no" title="statement not covered" >    options.method = 'PUT'</span>
@@ -205,7 +205,7 @@ export function httpRequest () {
 <span class="cstat-no" title="statement not covered" >    options.method = 'DELETE'</span>
 <span class="cstat-no" title="statement not covered" >    return customFetch(url, options)</span>
   }
-  return { get, post, put, del }
+<span class="cstat-no" title="statement not covered" >  return { get, post, put, del }</span>
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -214,7 +214,7 @@ export function httpRequest () {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-15T01:21:18.172Z
+                at 2023-02-15T01:50:43.985Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

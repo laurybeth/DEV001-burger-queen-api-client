@@ -16,10 +16,10 @@ function router () {
     </Routes>
     <ToastContainer
       position="bottom-left"
-      autoClose={2000}
+      autoClose={false}
       hideProgressBar={false}
       newestOnTop={false}
-      closeOnClick
+      // closeOnClick
       rtl={false}
       pauseOnFocusLoss
       draggable
