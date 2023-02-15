@@ -19,16 +19,16 @@ describe('Login', () => {
       <MemoryRouter>
         <Login />,
         <ToastContainer
-          position="bottom-left"
-          autoClose={false}
-          hideProgressBar={false}
-          newestOnTop={false}
-          // closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
+           position="bottom-left"
+           autoClose={2000}
+           hideProgressBar={false}
+           newestOnTop={false}
+           closeOnClick
+           rtl={false}
+           pauseOnFocusLoss
+           draggable
+           pauseOnHover
+           theme="light"
         />
       </MemoryRouter>)
   })
