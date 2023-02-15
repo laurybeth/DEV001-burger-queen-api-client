@@ -77,13 +77,15 @@ export function Login () {
               <label htmlFor="email" className="form-label text-white">Email
               </label>
               <input type="text" id = 'email' className="form-control form-input" name='email' placeholder="name@example.com" onChange = {handleChange} onBlur={handleBlur}/>
-              <div className='container-error'><div className='error-message'>{errorEmail}</div></div>
+              <div className='container-error'><div className='error-message'>{errorEmail}
+              </div></div>
               </div>
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
               <input type="password" className="form-control form-input " id = 'password' name='password' placeholder="********" onChange = {handleChange} onBlur={handleBlur} />
-              <p className='error-message'>{errorPassword}</p>
+              <div className='container-error'><div className='error-message'>{errorPassword}
+              </div></div>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
               <button type="submit" className="btn btn-primary btn-lg btn-login ">Login

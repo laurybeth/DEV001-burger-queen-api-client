@@ -23,10 +23,7 @@ body {
   max-width: 100%;
 }
 
-.container-login {
-  width: 80%;
-  margin: auto;
-}
+
 
 .card-body {
   background-image: url("./assets/bg2.jpg");
@@ -35,6 +32,12 @@ body {
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.container-login {
+  width: 70%;
+  margin: 2rem;
 }
 
 .form-label {
@@ -52,9 +55,9 @@ select {
   font-family: "Roboto", sans-serif;
 }
 
-.container-error{
+.container-error {
   display: flex;
-  justify-content: end;
+  justify-content:right;
   margin: 0.1rem 0 0.9rem 0 
 }
 .error-message {
@@ -63,6 +66,7 @@ select {
   background-color: #bf3a29;
   border-radius: 0.2rem;
   padding: 0 0.5rem 0 0.5rem ;
+  text-align:right;
 }
 
 .btn-login {
