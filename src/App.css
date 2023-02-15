@@ -66,7 +66,6 @@ select {
   background-color: #bf3a29;
   border-radius: 0.2rem;
   padding: 0 0.5rem 0 0.5rem ;
-  text-align:right;
 }
 
 .btn-login {
@@ -90,7 +89,7 @@ select {
 }
 
 .footer-text {
-  color: #202222;
+  color: #bf3a29;
   font-size: 0.8rem;
 }
 
