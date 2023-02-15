@@ -18,9 +18,9 @@ export function Login () {
 
   async function handleSubmit (e) {
     e.preventDefault()
-
-    await validateForm(form)
     try {
+      await validateForm(form)
+      console.log('pasa')
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })
