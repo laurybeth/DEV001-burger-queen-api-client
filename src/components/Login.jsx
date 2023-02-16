@@ -18,22 +18,18 @@ export function Login () {
 
   async function handleSubmit (e) {
     e.preventDefault()
-
-    await validateForm(form)
     try {
+      await validateForm(form)
+      
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })
-      try {
-        // mensaje de error
-        if (!response.error) {
-          toast.success('Success')
-          link('/waiterPanel')
-        } else {
-          toast.error('Please enter valid credentials')
-        }
-      } catch (error) {
-        console.log('Error: ', error.message)
+      // mensaje de error
+      if (!response.error) {
+        toast.success('Success')
+        link('/waiterPanel')
+      } else {
+        toast.error('Please enter valid credentials')
       }
     } catch (error) {
       if (error.code === 'email') {
@@ -81,13 +77,15 @@ export function Login () {
               <label htmlFor="email" className="form-label text-white">Email
               </label>
               <input type="text" id = 'email' className="form-control form-input" name='email' placeholder="name@example.com" onChange = {handleChange} onBlur={handleBlur}/>
-              <p className='error-message'>{errorEmail}</p>
+              <div className='container-error'><div className='error-message'>{errorEmail}
+              </div></div>
               </div>
               <div className='container-input'>
               <label htmlFor="password" className="form-label text-white">Password
               </label>
               <input type="password" className="form-control form-input " id = 'password' name='password' placeholder="********" onChange = {handleChange} onBlur={handleBlur} />
-              <p className='error-message'>{errorPassword}</p>
+              <div className='container-error'><div className='error-message'>{errorPassword}
+              </div></div>
               </div>
               <div className="d-grid gap-3 col-12 mx-auto">
               <button type="submit" className="btn btn-primary btn-lg btn-login ">Login

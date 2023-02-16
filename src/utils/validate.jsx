@@ -4,13 +4,14 @@ export function validateEmail (email) {
 }
 
 export function validateForm (form) {
+  form.email = form.email.trim()
   return new Promise((resolve, reject) => {
-    if (!form.email.trim()) {
+    if (!form.email) {
       reject({ code: 'email', message: 'Enter your email' })
     } else if (!validateEmail(form.email)) {
-      reject({ code: 'email', message: 'Invalid email. E.g. name@example.com' })
+      reject({ code: 'email', message: 'Invalid email' })
     }
-    if (!form.password.trim()) {
+    if (!form.password) {
       reject({ code: 'password', message: 'Enter your password' })
     }
     resolve(true)

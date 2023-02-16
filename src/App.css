@@ -9,19 +9,18 @@ body {
   background-color: #fcbf29;
   font-family: Roboto, sans-serif;
   height: 100vh;
+  border-radius: 0;
 }
 
 .card-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #202222;
-  width: 100%;
-  height: 20vh;
+  background-color: #fcbf29;
 }
 
 .logo {
-  width: 80%;
+  max-width: 100%;
 }
 
 .card-body {
@@ -29,32 +28,43 @@ body {
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   display: flex;
   align-items: center;
-  height: 73vh;
+  justify-content: center;
 }
 
 .container-login {
-  width: 80%;
-  margin: auto;
+  width: 70%;
+  margin: 2rem;
 }
 
 .form-label {
   font-size: 1.1rem;
   font-weight: 400;
-}
-
-.container-input {
-  margin-bottom: 2rem;
+  color: #202222;
 }
 
 .form-input {
   border: 1px solid #bf3a29;
+  padding: 0.8rem;
 }
 
 select {
   font-family: Roboto, sans-serif;
+}
+
+.container-error {
+  display: flex;
+  justify-content: right;
+  margin: 0.1rem 0 0.9rem;
+}
+
+.error-message {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #bf3a29;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
 }
 
 .btn-login {
@@ -63,57 +73,30 @@ select {
   background-color: #bf3a29;
   border-color: #bf3a29;
   color: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 
   --bs-btn-active-bg: #a43325;
   --bs-btn-active-border-color: #a43325;
   --bs-btn-hover-bg: #b83b2b;
   --bs-btn-hover-border-color: #a43325;
-
-  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-}
-
-.error-message {
-  color: #ff1e00;
-  font-size: 1rem;
-  text-align: right;
 }
 
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 7vh;
   background-color: #fcbf29;
-}
-
-.card-footer:last-child {
-  border-radius: 0;
 }
 
 .footer-text {
   color: #bf3a29;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .card-header {
-    height: 35vh;
-  }
-
-  .logo {
-    width: 60%;
-  }
-
   .card-body {
     background-image: url("./assets/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .container-login {
-    width: 60%;
-    margin: auto;
   }
 }

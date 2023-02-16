@@ -3,20 +3,12 @@ import { render, screen, waitFor } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
 import { Login } from '../src/components/Login'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
+import { httpRequest } from '../src/fetch-api/httpRequest'
 
-jest.mock('react-toastify')
-/* jest.mock('react-toastify', () => ({
-  toast: {
-    success: jest.fn()
-  }
-})) */
-/* jest.mock('@react-toastify', () => {
-  return {
-    ...jest.requireActual('@react-toastify'),
-    useToast: () => jest.fn()
-  }
-}) */
+jest.mock('../src/fetch-api/httpRequest', () => ({
+  httpRequest: jest.fn()
+}))
 
 describe('Login', () => {
   let renderInstance
@@ -24,63 +16,77 @@ describe('Login', () => {
   afterEach(jest.clearAllMocks)
   beforeEach(() => {
     renderInstance = render(
-    <MemoryRouter>
-        <Login/>,
+      <MemoryRouter>
+        <Login />,
         <ToastContainer
-      position="bottom-left"
-      autoClose={2000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="light"
-      />
-    </MemoryRouter>)
-    toast.success.mockClear()
-    toast.error.mockClear()
+           position="bottom-left"
+           autoClose={2000}
+           hideProgressBar={false}
+           newestOnTop={false}
+           closeOnClick
+           rtl={false}
+           pauseOnFocusLoss
+           draggable
+           pauseOnHover
+           theme="light"
+        />
+      </MemoryRouter>)
   })
 
   it('Should render the Login component', () => {
     expect(renderInstance).toBeTruthy()
   })
 
-  it('Success message with valid credentials', async () => {
-    // render(<Form onSubmit={handleSubmit} />)
+  it('Should appear a warning message when type invalid email and logging', async () => {
     const user = userEvent.setup()
-    await user.type(screen.getByLabelText(/email/i), 'laly@msn.com')
-    await user.type(screen.getByLabelText(/password/i), '123456')
+    await user.type(renderInstance.getByLabelText(/email/i), 'ln')
+    const submitButton = renderInstance.getByRole('button', { name: /login/i })
+    await user.click(submitButton)
 
-    await user.click(screen.getByRole('button', { name: /login/i }))
-    toast.mockReturnValue({
-      success: jest.fn()
+    await waitFor(() => {
+      expect(renderInstance.getByText(/Invalid email/i)).toBeInTheDocument()
     })
-    /*    const toast = jest.fn()
-    jest
-      .spyOn(require('@react-toastify'), 'useToast')
-      .mockImplementationOnce(() => toast) */
-
-    /*  setTimeout(() => {
-      expect(screen.findByText(/Success/i)).toBeInTheDocument()
-    }, 2000) */
-
-    await waitFor(() =>
-      expect(toast.success).toHaveBeenCalled())
   })
 
-  it('Error message with invalid credentials', async () => {
-    // render(<Form onSubmit={handleSubmit} />)
+  it('Should appear a warning message with empty password and logging', async () => {
+    const user = userEvent.setup()
+    await user.type(renderInstance.getByLabelText(/email/i), 'laly@msn.com')
+    const submitButton = renderInstance.getByRole('button', { name: /login/i })
+    await user.click(submitButton)
+
+    await waitFor(() => {
+      expect(renderInstance.getByText(/Enter your password/i)).toBeInTheDocument()
+    })
+  })
+
+  it('Should appear a success message when logging with valid credentials', async () => {
+    httpRequest.mockImplementation(() => ({
+      post: () => Promise.resolve({})
+    }))
+    const user = userEvent.setup()
+    await user.type(renderInstance.getByLabelText(/email/i), 'laly@msn.com')
+    await user.type(renderInstance.getByLabelText(/password/i), '123456')
+
+    const submitButton = renderInstance.getByRole('button', { name: /login/i })
+    await user.click(submitButton)
+
+    await waitFor(() => {
+      expect(renderInstance.getByText(/Success/i)).toBeInTheDocument()
+    })
+  })
+
+  it('Should appear an error message when logging with invalid credentials', async () => {
+    httpRequest.mockImplementation(() => ({
+      post: () => Promise.resolve({ error: true, status: 400, message: 'Bad request' })
+    }))
     const user = userEvent.setup()
     await user.type(screen.getByLabelText(/email/i), 'carlos@hotmail.com')
     await user.type(screen.getByLabelText(/password/i), '123456789')
     await user.click(screen.getByRole('button', { name: /login/i }))
 
-    // expect(screen.getByText(/Success/i)).toBeTruthy()
-    setTimeout(() => {
+    await waitFor(() => {
       expect(screen.getByText(/Please enter valid credentials/i)).toBeInTheDocument()
-    }, 2000)
+    })
   })
 })
 
