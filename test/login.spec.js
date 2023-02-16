@@ -37,7 +37,7 @@ describe('Login', () => {
     expect(renderInstance).toBeTruthy()
   })
 
-  it('Success message with valid credentials', async () => {
+  it('Should appear a success message with valid credentials', async () => {
     httpRequest.mockImplementation(() => ({
       post: () => Promise.resolve({})
     }))
@@ -53,7 +53,7 @@ describe('Login', () => {
     })
   })
 
-  it('Error message with invalid credentials', async () => {
+  it('Should appear an error message with invalid credentials', async () => {
     httpRequest.mockImplementation(() => ({
       post: () => Promise.resolve({ error: true, status: 400, message: 'Bad request' })
     }))
