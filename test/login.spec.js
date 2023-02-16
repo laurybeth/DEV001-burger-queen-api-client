@@ -48,6 +48,17 @@ describe('Login', () => {
     })
   })
 
+  it('Should appear a warning message with empty password and logging', async () => {
+    const user = userEvent.setup()
+    await user.type(renderInstance.getByLabelText(/email/i), 'laly@msn.com')
+    const submitButton = renderInstance.getByRole('button', { name: /login/i })
+    await user.click(submitButton)
+
+    await waitFor(() => {
+      expect(renderInstance.getByText(/Enter your password/i)).toBeInTheDocument()
+    })
+  })
+
   it('Should appear a success message when logging with valid credentials', async () => {
     httpRequest.mockImplementation(() => ({
       post: () => Promise.resolve({})
