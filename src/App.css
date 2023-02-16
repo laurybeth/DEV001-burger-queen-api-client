@@ -7,9 +7,9 @@ body {
 
 .card {
   background-color: #fcbf29;
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   height: 100vh;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .card-header {
@@ -22,8 +22,6 @@ body {
 .logo {
   max-width: 100%;
 }
-
-
 
 .card-body {
   background-image: url("./assets/bg2.jpg");
@@ -52,20 +50,21 @@ body {
 }
 
 select {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .container-error {
   display: flex;
-  justify-content:right;
-  margin: 0.1rem 0 0.9rem 0 
+  justify-content: right;
+  margin: 0.1rem 0 0.9rem;
 }
+
 .error-message {
-  color: #ffffff;
+  color: #fff;
   font-size: 0.9rem;
   background-color: #bf3a29;
   border-radius: 0.2rem;
-  padding: 0 0.5rem 0 0.5rem ;
+  padding: 0 0.5rem;
 }
 
 .btn-login {
@@ -75,6 +74,7 @@ select {
   border-color: #bf3a29;
   color: #fff;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+
   --bs-btn-active-bg: #a43325;
   --bs-btn-active-border-color: #a43325;
   --bs-btn-hover-bg: #b83b2b;
@@ -94,12 +94,9 @@ select {
 }
 
 @media screen and (min-width: 1000px) {
-  
   .card-body {
     background-image: url("./assets/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
-
-

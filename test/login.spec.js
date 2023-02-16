@@ -37,7 +37,18 @@ describe('Login', () => {
     expect(renderInstance).toBeTruthy()
   })
 
-  it('Should appear a success message with valid credentials', async () => {
+  it('Should appear a warning message when type invalid email and logging', async () => {
+    const user = userEvent.setup()
+    await user.type(renderInstance.getByLabelText(/email/i), 'ln')
+    const submitButton = renderInstance.getByRole('button', { name: /login/i })
+    await user.click(submitButton)
+
+    await waitFor(() => {
+      expect(renderInstance.getByText(/Invalid email/i)).toBeInTheDocument()
+    })
+  })
+
+  it('Should appear a success message when logging with valid credentials', async () => {
     httpRequest.mockImplementation(() => ({
       post: () => Promise.resolve({})
     }))
@@ -53,7 +64,7 @@ describe('Login', () => {
     })
   })
 
-  it('Should appear an error message with invalid credentials', async () => {
+  it('Should appear an error message when logging with invalid credentials', async () => {
     httpRequest.mockImplementation(() => ({
       post: () => Promise.resolve({ error: true, status: 400, message: 'Bad request' })
     }))
