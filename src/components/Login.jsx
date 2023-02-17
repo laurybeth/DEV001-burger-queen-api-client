@@ -20,7 +20,7 @@ export function Login () {
     e.preventDefault()
     try {
       await validateForm(form)
-      
+
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })

@@ -16,7 +16,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "users-api": "json-server-auth --watch src/api/auth.json --port 8080 -m"
+    "auth-api": "json-server-auth --watch src/api/auth.json --port 8080 -m"
   },
   "repository": {
     "type": "git",
