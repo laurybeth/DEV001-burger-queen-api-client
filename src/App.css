@@ -85,11 +85,16 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fcbf29;
+  background-color: #202222;
+  
 }
 
-.footer-text {
-  color: #bf3a29;
+.card-footer:last-child  {
+border-radius: 0;
+}
+
+.card.footer-text {
+  color: #fcbf29;
   font-size: 0.8rem;
 }
 
