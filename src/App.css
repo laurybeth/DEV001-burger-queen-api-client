@@ -86,14 +86,13 @@ select {
   align-items: center;
   justify-content: center;
   background-color: #202222;
-  
 }
 
-.card-footer:last-child  {
-border-radius: 0;
+.card-footer:last-child {
+  border-radius: 0;
 }
 
-.card.footer-text {
+.footer-text {
   color: #fcbf29;
   font-size: 0.8rem;
 }
