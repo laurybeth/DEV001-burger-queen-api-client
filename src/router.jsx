@@ -9,12 +9,12 @@ import { PrivateRoute } from './PrivateRouter'
 // import reactLogo from './assets/react.svg'
 
 function router () {
-  const user = JSON.parse(window.sessionStorage.getItem('user'))
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
   return (
     <>
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path="/waiterPanel" element={<PrivateRoute isLoggedIn={user && user.roles.waiter}>
+      <Route path="/waiterPanel" element={<PrivateRoute isLoggedIn={currentUser && currentUser.roles.waiter}>
         <WaiterPanel /></PrivateRoute>}/>
     </Routes>
     <ToastContainer

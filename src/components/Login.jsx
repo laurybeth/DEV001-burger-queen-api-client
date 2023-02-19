@@ -31,7 +31,7 @@ export function Login () {
         const token = response.accessToken
         const currentUser = response.user
         localStorage.setItem('accessToken', token)
-        localStorage.setItem('user', JSON.stringify(response.user))
+        localStorage.setItem('currentUser', JSON.stringify(response.user))
         toast.success('Success')
         if (currentUser.roles.waiter) {
           link('/waiterPanel')

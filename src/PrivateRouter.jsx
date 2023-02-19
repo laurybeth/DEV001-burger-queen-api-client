@@ -3,9 +3,9 @@ import { Navigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 export const PrivateRoute = ({ children, isLoggedIn }) => {
-  const user = JSON.parse(window.sessionStorage.getItem('user'))
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
 
-  if (!user) {
+  if (!currentUser) {
     useEffect(() => {
       toast.error('Login to access this page.')
     })
@@ -13,5 +13,5 @@ export const PrivateRoute = ({ children, isLoggedIn }) => {
     return <Navigate to='/' />
   }
 
-  return isLoggedIn ? children : false
+  return isLoggedIn ? children : ''
 }
