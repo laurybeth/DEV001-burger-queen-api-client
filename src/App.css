@@ -97,6 +97,14 @@ select {
   font-size: 0.8rem;
 }
 
+.userPanel {
+  justify-content: space-between;
+}
+.userPanel-text{
+  font-size: 1rem;
+}
+
+
 @media screen and (min-width: 1000px) {
   .card-body {
     background-image: url("./assets/bg1.jpg");

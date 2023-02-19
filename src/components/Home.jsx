@@ -3,7 +3,12 @@ import { Footer } from './Footer'
 import { Login } from './Login'
 
 export function Home () {
-  const text = 'Copyright © 2023 Burger Queen ®'
+  const e =
+  <div className="card-footer text-muted" data-testid='footer-element'>
+  <div className='footer-text'>Copyright © 2023 Burger Queen
+    </div>
+  </div>
+
   return (
     <div className="card">
       <div className="card-header">
@@ -13,7 +18,7 @@ export function Home () {
       <div className="card-body">
        <Login/>
       </div>
-      <Footer element = {text}/>
+      <Footer element = {e}/>
     </div>
   )
 }
