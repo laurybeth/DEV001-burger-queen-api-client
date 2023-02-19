@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Home.jsx</title>
+    <title>Code coverage report for src/components/UserPanel.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Home.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> UserPanel.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -79,30 +79,14 @@
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -112,27 +96,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Footer } from './Footer'
-import { Login } from './Login'
+import { useAuthContext } from '../contexts/AuthContextProvider'
 &nbsp;
-export function Home () {
-  const e =
-  &lt;div className="card-footer text-muted" data-testid='footer-element'&gt;
-  &lt;div className='footer-text'&gt;Copyright © 2023 Burger Queen
+export function <span class="fstat-no" title="function not covered" >UserPanel </span>() {
+  const AuthContext = <span class="cstat-no" title="statement not covered" >useAuthContext()</span>
+  const userEmail = <span class="cstat-no" title="statement not covered" >AuthContext.currentUser.user.email</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className="card-footer text-muted user-panel" data-testid='footer-element'&gt;
+    &lt;div className='footer-text user-panel-text' &gt;User: {userEmail}
+    &lt;/div&gt;
+    &lt;div&gt;&lt;img src ='./src/assets/icons/logout.svg' alt='logout'&gt;&lt;/img&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&nbsp;
-  return (
-    &lt;div className="card"&gt;
-      &lt;div className="card-header"&gt;
-        &lt;img className="logo" src='https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/main/src/assets/logo.png
-        '&gt;&lt;/img&gt;
-      &lt;/div&gt;
-      &lt;div className="card-body"&gt;
-       &lt;Login/&gt;
-      &lt;/div&gt;
-      &lt;Footer element = {e}/&gt;
-    &lt;/div&gt;
   )
 }
 &nbsp;</pre></td></tr></table></pre>

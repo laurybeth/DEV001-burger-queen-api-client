@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Home.jsx</title>
+    <title>Code coverage report for src/contexts/AuthContextProvider.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Home.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/contexts</a> AuthContextProvider.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">36.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">36.36% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -87,52 +87,61 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Footer } from './Footer'
-import { Login } from './Login'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { createContext, useContext, useState } from 'react'
 &nbsp;
-export function Home () {
-  const e =
-  &lt;div className="card-footer text-muted" data-testid='footer-element'&gt;
-  &lt;div className='footer-text'&gt;Copyright © 2023 Burger Queen
-    &lt;/div&gt;
-  &lt;/div&gt;
+export const AuthContext = createContext()
 &nbsp;
-  return (
-    &lt;div className="card"&gt;
-      &lt;div className="card-header"&gt;
-        &lt;img className="logo" src='https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/main/src/assets/logo.png
-        '&gt;&lt;/img&gt;
-      &lt;/div&gt;
-      &lt;div className="card-body"&gt;
-       &lt;Login/&gt;
-      &lt;/div&gt;
-      &lt;Footer element = {e}/&gt;
-    &lt;/div&gt;
+export function useAuthContext () {
+  const auth = useContext(AuthContext)
+  return auth
+}
+&nbsp;
+// eslint-disable-next-line react/prop-types
+export const AuthContextProvider = <span class="fstat-no" title="function not covered" >({</span> children }) =&gt; {
+  const [login, setLogin] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
+  const [currentUser, setUser] = <span class="cstat-no" title="statement not covered" >useState({})</span>
+&nbsp;
+  const setCurrentUser = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(u</span>ser) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    setUser(user)</span>
+  }
+  const setLogged = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    setLogin(value)</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;AuthContext.Provider value={{ login, setLogged, setCurrentUser, currentUser }}&gt;
+      {children}
+    &lt;/AuthContext.Provider&gt;
   )
 }
 &nbsp;</pre></td></tr></table></pre>

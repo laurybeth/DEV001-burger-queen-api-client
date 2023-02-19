@@ -30,13 +30,13 @@ export function Login () {
       })
       // mensaje de error
       if (!response.error) {
+        toast.success('Success')
         const currentUser = response
         AuthContext.setCurrentUser(currentUser)
         AuthContext.setLogged(true)
-        toast.success('Success')
         link('/waiterPanel')
       } else {
-        toast.error('Please enter valid credentials')
+        toast.error('Wrong email or password')
       }
     } catch (error) {
       if (error.code === 'email') {

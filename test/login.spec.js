@@ -85,7 +85,7 @@ describe('Login', () => {
     await user.click(screen.getByRole('button', { name: /login/i }))
 
     await waitFor(() => {
-      expect(screen.getByText(/Please enter valid credentials/i)).toBeInTheDocument()
+      expect(screen.getByText(/Wrong email or password/i)).toBeInTheDocument()
     })
   })
 })

@@ -97,13 +97,13 @@ select {
   font-size: 0.8rem;
 }
 
-.userPanel {
+.user-panel {
   justify-content: space-between;
 }
-.userPanel-text{
+
+.user-panel-text {
   font-size: 1rem;
 }
-
 
 @media screen and (min-width: 1000px) {
   .card-body {
