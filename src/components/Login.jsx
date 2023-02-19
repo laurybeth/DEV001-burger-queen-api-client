@@ -30,11 +30,17 @@ export function Login () {
       })
       // mensaje de error
       if (!response.error) {
+        const token = response.accessToken
+        const currentUser = response.user
+        localStorage.setItem('accessToken', token)
+        localStorage.setItem('user', JSON.stringify(response.user))
         toast.success('Success')
-        const currentUser = response
-        AuthContext.setCurrentUser(currentUser)
-        AuthContext.setLogged(true)
-        link('/waiterPanel')
+        if (currentUser.roles.waiter) {
+          link('/waiterPanel')
+        }
+        /*       const currentUser = [...response, response.accessToken]
+        AuthContext.updateUser(currentUser) */
+        // AuthContext.setLogged(true)
       } else {
         toast.error('Wrong email or password')
       }
