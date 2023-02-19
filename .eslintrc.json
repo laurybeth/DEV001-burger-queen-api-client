@@ -37,6 +37,7 @@
         "jest/valid-expect": "error",
         "import/no-cycle": "off",
         "no-unused-vars": "warn",
-        "prefer-promise-reject-errors": "warn"
+        "prefer-promise-reject-errors": "warn",
+        "react/prop-types": "warn"
       }
 }

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { validateForm } from '../utils/validate'
 import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
-import { useAuthContext } from '../contexts/AuthContextProvider'
 
 const initialForm = {
   id: null,
@@ -16,7 +15,6 @@ export function Login () {
   const [form, setForm] = useState(initialForm)
   const [errorEmail, setErrorEmail] = useState('')
   const [errorPassword, setErrorPassword] = useState('')
-  const AuthContext = useAuthContext()
   // console.log('Logged', AuthContext)
 
   async function handleSubmit (e) {
