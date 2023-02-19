@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuthContext } from '../contexts/AuthContextProvider'
 
-export function LoggedPanel () {
+export function UserPanel () {
   const AuthContext = useAuthContext()
   const userEmail = AuthContext.currentUser.user.email
 
