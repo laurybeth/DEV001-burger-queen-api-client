@@ -26,8 +26,11 @@ export function Login () {
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })
+      console.log(response.error)
       // mensaje de error
-      if (!response.error) {
+      if (Object.prototype.hasOwnProperty.call(response, 'error')) {
+        toast.error('Wrong email or password')
+      } else {
         const token = response.accessToken
         const currentUser = response.user
         localStorage.setItem('accessToken', token)
@@ -39,8 +42,6 @@ export function Login () {
         /*       const currentUser = [...response, response.accessToken]
         AuthContext.updateUser(currentUser) */
         // AuthContext.setLogged(true)
-      } else {
-        toast.error('Wrong email or password')
       }
     } catch (error) {
       if (error.code === 'email') {

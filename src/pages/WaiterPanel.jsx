@@ -6,9 +6,9 @@ import { UserPanel } from '../components/UserPanel'
 
 export function WaiterPanel () {
   return (
-  <div className='card container-page'>
+  <div className='card page-container'>
     <Header/>
-    <div className="card-body">
+    <div className="card-body page-body">
       <Menu/>
     </div>
     <Footer element = { <UserPanel/> }/>
