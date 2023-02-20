@@ -1,8 +1,8 @@
 import React from 'react'
-import { Header } from './Header'
-import { Footer } from './Footer'
-import { Menu } from './Menu'
-import { UserPanel } from './UserPanel'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
+import { Menu } from '../components/Menu'
+import { UserPanel } from '../components/UserPanel'
 
 export function WaiterPanel () {
   return (

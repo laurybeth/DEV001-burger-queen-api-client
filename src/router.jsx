@@ -1,7 +1,7 @@
 
 import React from 'react'
-import { Home } from './components/Home'
-import { WaiterPanel } from './components/WaiterPanel'
+import { Home } from './pages/Home'
+import { WaiterPanel } from './pages//WaiterPanel'
 import { Route, Routes } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'

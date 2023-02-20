@@ -1,7 +1,7 @@
 import React from 'react'
-import { Header } from './Header'
-import { Footer } from './Footer'
-import { Login } from './Login'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
+import { Login } from '../components/Login'
 
 export function Home () {
   const e =
