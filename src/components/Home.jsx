@@ -11,7 +11,7 @@ export function Home () {
   </div>
 
   return (
-    <div className="card">
+    <div className="card container-page">
       <Header/>
       <div className="card-body">
        <Login/>

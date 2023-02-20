@@ -5,14 +5,14 @@ body {
   height: 100vh;
 }
 
-.card {
+.container-page {
   background-color: #fcbf29;
   font-family: Roboto, sans-serif;
   height: 100vh;
   border-radius: 0;
 }
 
-.card-header {
+.page-header {
   display: flex;
   align-items: center;
   justify-content: center;
