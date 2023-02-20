@@ -1,4 +1,5 @@
 import React from 'react'
+import { Header } from './Header'
 import { Footer } from './Footer'
 import { Login } from './Login'
 
@@ -11,10 +12,7 @@ export function Home () {
 
   return (
     <div className="card">
-      <div className="card-header">
-        <img className="logo" src='https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/main/src/assets/logo.png
-        '></img>
-      </div>
+      <Header/>
       <div className="card-body">
        <Login/>
       </div>

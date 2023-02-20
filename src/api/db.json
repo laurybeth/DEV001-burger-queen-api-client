@@ -44,6 +44,31 @@
         "admin": false
       },
       "id": 5
+    },
+    {
+      "email": "avril@gmail.com",
+      "password": "$2a$10$u99IEDFiIhkNbhWwxhSRHemuHakX5VpVqHfgV2cczAHZiHe2r2z8G",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "American coffee",
+      "description": "Coffee consisting of exactly equal parts of espresso and water",
+      "price": "$ 5.00",
+      "image": "prueba",
+      "type": "Breakfast",
+      "dataEntry": "20/02/23",
+      "id": 1
+    },
+    {
+      "name": "Latte",
+      "description": "Coffee with milk",
+      "price": "$ 7.00",
+      "image": "prueba",
+      "type": "Breakfast",
+      "dataEntry": "20/02/23",
+      "id": 2
     }
   ]
 }
