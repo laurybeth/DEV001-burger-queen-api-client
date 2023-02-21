@@ -7,7 +7,7 @@ body {
 
 .page-container {
   background-color: #fcbf29;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
   border-radius: 0;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 select {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container-error {
@@ -80,6 +80,36 @@ select {
   --bs-btn-active-border-color: #a43325;
   --bs-btn-hover-bg: #b83b2b;
   --bs-btn-hover-border-color: #a43325;
+}
+
+.container-menu {
+  background-color: #00000000;
+}
+
+.nav-text
+{
+color:#fff;
+font-family: 'Patua One', cursive;
+font-size: 1.3rem;
+position: relative;
+}
+
+.container-nav{
+--bs-nav-link-hover-color: #ffffff;
+background-color: #bf3a29;
+border-radius: 0.6rem;
+border: 3px solid #bf3a29;
+}
+
+.nav-text:focus::after, .nav-text:hover::after {
+content:'';
+background-color: #fcbf29;
+position: absolute;
+width: 85%;
+height: 0.2rem;
+top: 2.4rem;
+right: 0.7rem;
+z-index: 1;
 }
 
 .card-footer {
