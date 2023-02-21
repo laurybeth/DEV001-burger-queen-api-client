@@ -4,6 +4,10 @@ body {
   background-size: cover;
   height: 100vh;
 }
+.card{
+  --bs-card-border-color:#20222200;
+
+}
 
 .page-container {
   background-color: #fcbf29;
@@ -110,6 +114,35 @@ height: 0.2rem;
 top: 2.4rem;
 right: 0.7rem;
 z-index: 1;
+}
+
+.container-product{
+  background-color: #202222;
+  border: #fcbf29 solid 1px;
+  margin:0.4rem;
+}
+
+.body-product{
+  display: flex;
+  width: 100%;
+}
+.left-side{
+  width: 70%;
+}
+
+.right-side{
+  width: 30%;
+}
+.text-product{
+  color: #fcbf29;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.text-product-description
+{
+font-size: 0.9rem;
+font-weight: 400;
 }
 
 .card-footer {
