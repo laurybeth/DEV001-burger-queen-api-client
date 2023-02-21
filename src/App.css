@@ -145,6 +145,20 @@ font-size: 0.9rem;
 font-weight: 400;
 }
 
+.container-product-price{
+
+width: 75%;
+}
+
+.container-product-count{
+  border:#fcbf29 1px solid;
+  border-radius: 1.8rem;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
 .card-footer {
   display: flex;
   align-items: center;
@@ -170,7 +184,7 @@ font-weight: 400;
 }
 
 @media screen and (min-width: 1000px) {
-  .card-body {
+  .page-body {
     background-image: url("./assets/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;

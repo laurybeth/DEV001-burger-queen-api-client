@@ -12,8 +12,11 @@ export function Product ({ id, name, description, price, image }) {
       <div className='right-side'><img src={`${image}`}/></div>
      </div>
      <div className='card-footer body-product'>
-      <div className='text-product left-side'>{price}</div>
-      <div className='text-product right-side'><img></img>{1}<img></img></div>
+      <div className='text-product container-product-price'>{price}</div>
+      <div className='text-product container-product-count'>
+        <a href="#"><img src='./src/assets/icons/minus.svg'></img></a>{1}
+        <a href="#"><img src='./src/assets/icons/plus.svg'></img></a>
+      </div>
      </div>
     </div>
   )
