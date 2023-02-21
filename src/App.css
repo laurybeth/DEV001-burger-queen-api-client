@@ -124,14 +124,17 @@ z-index: 1;
 
 .body-product{
   display: flex;
+  align-items: center;
   width: 100%;
 }
 .left-side{
-  width: 70%;
+  width: 65%;
 }
 
 .right-side{
-  width: 30%;
+  width: 35%;
+  display: flex;
+  justify-content: right;
 }
 .text-product{
   color: #fcbf29;
@@ -147,17 +150,28 @@ font-weight: 400;
 
 .container-product-price{
 
-width: 75%;
+width: 80%;
 }
 
 .container-product-count{
   border:#fcbf29 1px solid;
   border-radius: 1.8rem;
-  width: 25%;
+  width: 20%;
   display: flex;
   justify-content: space-evenly;
 }
 
+.img-product{
+  background: url(1909.i305.022.P.m005.c20);
+  border-radius: 12px;
+  width: 50%;
+}
+
+.container-product-add{
+  width: 20%;
+  display: flex;
+  justify-content: right;
+}
 
 .card-footer {
   display: flex;

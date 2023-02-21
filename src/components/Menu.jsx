@@ -20,7 +20,7 @@ export function Menu () {
       <div className="card-header">
         <ul className="nav container-nav justify-content-center">
         <li className="nav-item">
-            <a className="nav-link active nav-text" href="#" onClick={handleMenu} name='Breakfast'>Breakfast</a>
+            <a className="nav-link active nav-text active" href="#" onClick={handleMenu} name='Breakfast'>Breakfast</a>
         </li>
         <li className="nav-item">
             <a className="nav-link nav-text" href="#" onClick={handleMenu} name='Lunch & Dinner'>Lunch & Dinner</a>

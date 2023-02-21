@@ -56,7 +56,7 @@
       "name": "American coffee",
       "description": "Coffee consisting of exactly equal parts of espresso and water",
       "price": "$ 5.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg",
       "type": "Breakfast",
       "dataEntry": "20/02/23",
       "id": 1
@@ -65,7 +65,7 @@
       "name": "Latte",
       "description": "Coffee with milk",
       "price": "$ 7.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg",
       "type": "Breakfast",
       "dataEntry": "20/02/23",
       "id": 2

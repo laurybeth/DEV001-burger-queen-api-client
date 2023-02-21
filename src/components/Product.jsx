@@ -9,13 +9,12 @@ export function Product ({ id, name, description, price, image }) {
         <div className='text-product'>{name}</div>
         <div className='text-product text-product-description'>{description}</div>
       </div>
-      <div className='right-side'><img src={`${image}`}/></div>
+      <div className='right-side'><img className='img-product' src={`${image}`}/></div>
      </div>
      <div className='card-footer body-product'>
       <div className='text-product container-product-price'>{price}</div>
-      <div className='text-product container-product-count'>
-        <a href="#"><img src='./src/assets/icons/minus.svg'></img></a>{1}
-        <a href="#"><img src='./src/assets/icons/plus.svg'></img></a>
+      <div className='text-product container-product-add'>
+        <a href="#"><img src='./src/assets/icons/add.svg'></img></a>
       </div>
      </div>
     </div>
