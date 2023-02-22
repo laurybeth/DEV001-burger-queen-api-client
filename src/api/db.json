@@ -69,6 +69,78 @@
       "type": "Breakfast",
       "dataEntry": "20/02/23",
       "id": 2
+    },
+    {
+      "name": "Sandwich",
+      "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread",
+      "price": "$ 10.00",
+      "image": "prueba",
+      "type": "Breakfast",
+      "dataEntry": "21/02/2023",
+      "id": 3
+    },
+    {
+      "name": "Orange juice",
+      "description": "Natural orange juice",
+      "price": "$ 7.00",
+      "image": "prueba",
+      "type": "Breakfast",
+      "dataEntry": "21/02/2023",
+      "id": 4
+    },
+    {
+      "name": "Plain burger",
+      "description": "Ground beef burger",
+      "price": "$ 10.00",
+      "image": "prueba",
+      "type": "Dinner",
+      "dataEntry": "21/02/2023",
+      "id": 5
+    },
+    {
+      "name": "Double burger",
+      "description": "Brioche bread accompanied by double hamburger 200 gr. 100% meat, double dambo cheese, tomato lettuce and special sauce",
+      "price": "$ 15.00",
+      "image": "prueba",
+      "type": "Dinner",
+      "dataEntry": "21/02/2023",
+      "id": 6
+    },
+    {
+      "name": "French fries",
+      "description": "Portion of fries",
+      "price": "$ 5.00",
+      "image": "prueba",
+      "type": "Dinner",
+      "dataEntry": "21/02/2023",
+      "id": 7
+    },
+    {
+      "name": "Onion rings",
+      "description": "Sliced onions that are dipped in a batter, and deep fried until crisp.",
+      "price": "$ 5.00",
+      "image": "prueba",
+      "type": "Dinner",
+      "dataEntry": "21/02/2023",
+      "id": 8
+    },
+    {
+      "name": "Soda",
+      "description": "750 ml",
+      "price": "$ 10.00",
+      "image": "prueba",
+      "type": "Dinner",
+      "dataEntry": "21/02/2023",
+      "id": 9
+    },
+    {
+      "name": "Water",
+      "description": "750 ml",
+      "price": "$ 7.00",
+      "image": "prueba",
+      "type": "Breakfast",
+      "dataEntry": "21/02/2023",
+      "id": 10
     }
   ]
 }
