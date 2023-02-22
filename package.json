@@ -35,7 +35,6 @@
   },
   "homepage": "https://laurybeth.github.io/DEV001-burger-queen-api-client",
   "dependencies": {
-    "gh-pages": "^5.0.0",
     "htmlhint": "^1.1.4",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
@@ -59,6 +58,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "json-server": "^0.17.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "stylelint": "^14.16.1",
