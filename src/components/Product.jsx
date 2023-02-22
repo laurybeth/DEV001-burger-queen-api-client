@@ -3,6 +3,7 @@ import React from 'react'
 export function Product ({ id, name, description, price, image }) {
   function handleAdd (e) {
     e.preventDefault()
+    
   }
 
   return (

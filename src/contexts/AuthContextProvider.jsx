@@ -7,7 +7,6 @@ export function useAuthContext () {
   return auth
 }
 
-// eslint-disable-next-line react/prop-types
 export const AuthContextProvider = ({ children }) => {
   // const [login, setLogin] = useState(false)
   const [currentUser, setUser] = useState({})
