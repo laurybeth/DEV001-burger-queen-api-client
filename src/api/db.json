@@ -54,7 +54,7 @@
   "products": [
     {
       "name": "American coffee",
-      "description": "Coffee consisting of exactly equal parts of espresso and water",
+      "description": "Coffee consisting of exactly equal parts of espresso and water.",
       "price": "$ 5.00",
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg",
       "type": "Breakfast",
@@ -63,7 +63,7 @@
     },
     {
       "name": "Latte",
-      "description": "Coffee with milk",
+      "description": "Coffee with milk.",
       "price": "$ 7.00",
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg",
       "type": "Breakfast",
@@ -72,45 +72,45 @@
     },
     {
       "name": "Sandwich",
-      "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread",
+      "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread.",
       "price": "$ 10.00",
-      "image": "prueba",
+      "image": "https://github.com/laurybeth/DEV001-burger-queen-api-client/blob/hu2/src/assets/products/sandwich.jpg?raw=true",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
       "id": 3
     },
     {
       "name": "Orange juice",
-      "description": "Natural orange juice",
+      "description": "Natural orange juice.",
       "price": "$ 7.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/juice.jpg",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
       "id": 4
     },
     {
       "name": "Plain burger",
-      "description": "Ground beef burger",
+      "description": "Ground beef burger.",
       "price": "$ 10.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/hamburger1.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
       "id": 5
     },
     {
       "name": "Double burger",
-      "description": "Brioche bread accompanied by double hamburger 200 gr. 100% meat, double dambo cheese, tomato lettuce and special sauce",
+      "description": "Brioche bread accompanied by double hamburger 200 gr. 100% meat, double dambo cheese, tomato lettuce and special sauce.",
       "price": "$ 15.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/hamburger2.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
       "id": 6
     },
     {
       "name": "French fries",
-      "description": "Portion of fries",
+      "description": "Portion of fries.",
       "price": "$ 5.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/patatas.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
       "id": 7
@@ -119,7 +119,7 @@
       "name": "Onion rings",
       "description": "Sliced onions that are dipped in a batter, and deep fried until crisp.",
       "price": "$ 5.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/onions.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
       "id": 8
@@ -128,7 +128,7 @@
       "name": "Soda",
       "description": "750 ml",
       "price": "$ 10.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/soda.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
       "id": 9
@@ -137,7 +137,7 @@
       "name": "Water",
       "description": "750 ml",
       "price": "$ 7.00",
-      "image": "prueba",
+      "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/water.jpg",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
       "id": 10

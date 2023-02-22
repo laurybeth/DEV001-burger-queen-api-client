@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { Home } from '../src/components/Home'
+import { Home } from '../src/pages/Home'
 import { MemoryRouter } from 'react-router-dom'
 
 describe('Home', () => {
