@@ -1,9 +1,13 @@
 import React from 'react'
+import { useOrderContext } from '../contexts/OrderContextProvider'
 
 export function Product ({ id, name, description, price, image }) {
+  const { updateOrder } = useOrderContext()
+
   function handleAdd (e) {
     e.preventDefault()
-    
+    const order = { name, price }
+    updateOrder(order)
   }
 
   return (

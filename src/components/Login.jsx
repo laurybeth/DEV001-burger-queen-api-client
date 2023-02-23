@@ -26,7 +26,7 @@ export function Login () {
       const response = await httpRequest().post('http://localhost:8080/login', {
         body: form
       })
-      console.log(response.error)
+      // console.log(response.error)
       // mensaje de error
       if (Object.prototype.hasOwnProperty.call(response, 'error')) {
         toast.error('Wrong email or password')
