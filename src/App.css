@@ -7,11 +7,13 @@ body {
 
 .card {
   --bs-card-border-color: #20222200;
+  --bs-card-bg: #20222200;
 }
 
 .page-container {
   background-color: #fcbf29;
   font-family: Roboto, sans-serif;
+  font-weight: 400;
   height: 100vh;
   border-radius: 0;
 }
@@ -74,6 +76,8 @@ select {
 
 .btn-login {
   margin-top: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
   font-size: 1.4rem;
   background-color: #bf3a29;
   border-color: #bf3a29;
@@ -85,24 +89,29 @@ select {
   --bs-btn-hover-bg: #b83b2b;
   --bs-btn-hover-border-color: #a43325;
 }
+.waiter-page-body{
+  align-items: flex-start;
+}
 
 .container-menu {
   background-color: #0000;
+  width: 50%;
+}
+
+
+.container-nav {
+  --bs-nav-link-hover-color: #fff;
+
+  background-color: #202222;
+  border-radius: 0.6rem;
+  border: 3px solid #fcbf29;
 }
 
 .nav-text {
   color: #fff;
   font-family: "Patua One", cursive;
-  font-size: 1.3rem;
-  position: relative;
-}
-
-.container-nav {
-  --bs-nav-link-hover-color: #fff;
-
-  background-color: #bf3a29;
-  border-radius: 0.6rem;
-  border: 3px solid #bf3a29;
+  font-size: 1.4rem;
+  position: relative;  
 }
 
 .nav-text:focus::after,
@@ -111,7 +120,7 @@ select {
   background-color: #fcbf29;
   position: absolute;
   width: 85%;
-  height: 0.2rem;
+  height: 0.15rem;
   top: 2.4rem;
   right: 0.7rem;
   z-index: 1;
@@ -120,33 +129,36 @@ select {
 .container-product {
   background-color: #202222;
   border: #fcbf29 solid 1px;
-  margin: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .body-product {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   width: 100%;
 }
 
-.left-side {
-  width: 65%;
+.body-product-left-side {
+  width: 65%;  
+  margin-right:0.8rem;
 }
 
-.right-side {
+.body-product-right-side {
   width: 35%;
   display: flex;
   justify-content: right;
+
 }
 
-.text-product {
+.product-text {
   color: #fcbf29;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
 }
 
-.text-product-description {
-  font-size: 0.9rem;
+.product-description {
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -154,17 +166,9 @@ select {
   width: 80%;
 }
 
-.container-product-count {
-  border: #fcbf29 1px solid;
-  border-radius: 1.8rem;
-  width: 20%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .img-product {
   border-radius: 12px;
-  width: 50%;
+  max-width: 100%;
 }
 
 .container-product-add {
@@ -172,6 +176,73 @@ select {
   display: flex;
   justify-content: right;
 }
+
+.order-item {
+  padding-bottom:2rem
+}
+.container-order-body{
+  margin-top:1rem;
+  background-color: #202222;
+  border: #fcbf29 solid 1px;
+  border-radius: 0.5rem;
+}
+
+.body-order-item {
+padding-bottom: 1rem;
+
+}
+
+.body-order-item-left-side{
+  width: 85%;
+}
+.body-order-item-right-side{
+  width: 15%
+}
+
+.order-item-text{
+font-size: 1.1rem;
+
+}
+
+.order-item-description{
+  font-size: 0.8rem;
+  }
+.order-item-number{
+  color: #fcbf29;
+  font-weight: 700;
+  font-size: 1.2rem;
+  
+}
+.container-order-item-price{
+width: 50%;
+
+}
+ .container-order-item-amount {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .container-order-item-count {
+    border: #fcbf29 1px solid;
+    border-radius: 1.8rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-total {
+    color: #fcbf29;
+    font-family: "Patua One", cursive;
+    font-size: 1.9rem;
+    margin: 4rem 1rem 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  
+  }
 
 .card-footer {
   display: flex;

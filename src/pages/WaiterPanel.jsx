@@ -11,7 +11,7 @@ export function WaiterPanel () {
     <OrderContextProvider>
       <div className='card page-container'>
         <Header/>
-        <div className="card-body page-body">
+        <div className="card-body page-body waiter-page-body">
           <Menu/>
           <Order/>
         </div>

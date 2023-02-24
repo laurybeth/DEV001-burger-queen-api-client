@@ -6,22 +6,22 @@ export function Product ({ id, name, description, price, image }) {
 
   function handleAdd (e) {
     e.preventDefault()
-    const order = { name, price }
+    const order = { id, name, description, price, image }
     updateOrder(order)
   }
 
   return (
     <div className='card container-product'>
      <div className="card-body body-product">
-      <div className='left-side'>
-        <div className='text-product'>{name}</div>
-        <div className='text-product text-product-description'>{description}</div>
+      <div className='body-product-left-side'>
+        <div className='product-text'>{name}</div>
+        <div className='product-text product-description'>{description}</div>
       </div>
-      <div className='right-side'><img className='img-product' alt='product image' src={`${image}`}/></div>
+      <div className='body-product-right-side'><img className='img-product' alt='product image' src={`${image}`}/></div>
      </div>
      <div className='card-footer body-product'>
-      <div className='text-product container-product-price'>{price}</div>
-      <div className='text-product container-product-add'>
+      <div className='product-text container-product-price'>{price}</div>
+      <div className='product-text container-product-add'>
         <a href="#"><img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd}></img></a>
       </div>
      </div>

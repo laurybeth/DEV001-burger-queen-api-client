@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { httpRequest } from '../fetch-api/httpRequest'
 import { Product } from './Product'
 
 export function Menu () {
   const [products, setProducts] = useState([])
 
-  async function handleMenu (e) {
-    e.preventDefault()
-    const productType = e.target.name
-    console.log(productType)
+  async function getProducts (productType) {
     try {
       const response = await httpRequest().get(`http://localhost:8080/products?type=${productType}`)
       const productsList = response
@@ -17,6 +14,17 @@ export function Menu () {
       console.log(error)
     }
   }
+
+  async function handleMenu (e) {
+    e.preventDefault()
+
+    const productType = e.target.name
+    getProducts(productType)
+  }
+
+  useEffect(() => {
+    getProducts('Breakfast')
+  }, [])
 
   return (
     <div className='card container-menu'>
