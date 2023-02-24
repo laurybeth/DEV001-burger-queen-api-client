@@ -6,8 +6,11 @@ export function Menu () {
   const [products, setProducts] = useState([])
 
   async function getProducts (productType) {
+    const accessToken = localStorage.getItem('accessToken')
     try {
-      const response = await httpRequest().get(`http://localhost:8080/products?type=${productType}`)
+      const response = await httpRequest().get(`http://localhost:8080/products?type=${productType}`, {
+        Authorization: `Bearer ${accessToken}`
+      })
       const productsList = response
       setProducts(productsList)
     } catch (error) {

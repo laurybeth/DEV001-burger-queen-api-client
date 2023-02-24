@@ -23,15 +23,15 @@ export function Order () {
           <option className='select-options' value="3">Table nº 3</option>
         </select>
       </div>
-        {currentOrder.map((product) => {
+        {currentOrder.map((item) => {
           return (
                   <OrderItem
-                    key={product.id}
-                    id={product.id}
-                    name={product.name}
-                    description={product.description}
-                    image={product.image}
-                    price={product.price}
+                    key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    description={item.description}
+                    image={item.image}
+                    price={item.price}
                   />
           )
         })}

@@ -185,8 +185,6 @@ select {
 }
 
 .container-select-table{
-  display: flex;
-  justify-content: right;
 margin: 1rem 0 2.5rem 1rem;
 }
 .container-select-table select{
@@ -202,7 +200,6 @@ margin: 1rem 0 2.5rem 1rem;
   font-size: 1.3rem;
   background-color: #202222;
   border:#fcbf29 solid 1px;
-  width: 40%;
   text-align: center;
 }
 .select-options{
