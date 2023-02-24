@@ -1,4 +1,5 @@
 import React from 'react'
+import { OrderItem } from './OrderItem'
 import { useOrderContext } from '../contexts/OrderContextProvider'
 
 export function Order () {
@@ -22,30 +23,18 @@ export function Order () {
           <option className='select-options' value="3">Table nº 3</option>
         </select>
       </div>
-        {currentOrder.map((product) => (
-      // eslint-disable-next-line react/jsx-key
-      <div className='card container-order-item'>
-        <div className="card-body body-product order-item-body">
-              <div className='body-product-left-side order-item-body-left-side'>
-                <div className='product-text order-item-text'>{product.name}</div>
-                <div className='product-text product-description order-item-description'>{product.description}</div>
-              </div>
-              <div className='body-product-right-side order-item-body-right-side'><img className='img-product' src={`${product.image}`} /></div>
-        </div>
-        <div className='card-footer'>
-                <div className='order-item-number container-order-item-price'>{product.price}</div>
-                <div className='order-item-text container-order-item-amount'>
-                    <div className='order-item-number container-order-item-count'>
-                    <a href="#"><img src='./src/assets/icons/minus.svg'></img></a>{1}
-                    <a href="#"><img src='./src/assets/icons/plus.svg'></img></a>
-                    </div>
-                    <div>
-                    <a href="#"><img src='./src/assets/icons/trash.svg'></img></a>
-                    </div>
-                </div>
-        </div>
-      </div>
-        ))}
+        {currentOrder.map((product) => {
+          return (
+                  <OrderItem
+                    key={product.id}
+                    id={product.id}
+                    name={product.name}
+                    description={product.description}
+                    image={product.image}
+                    price={product.price}
+                  />
+          )
+        })}
       <div className='container-total'><span>Total
         </span>
         <span>$ 0.00
