@@ -5,7 +5,6 @@ import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
 
 const initialForm = {
-  id: null,
   email: '',
   password: ''
 }

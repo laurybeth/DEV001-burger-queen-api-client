@@ -5,9 +5,16 @@ const router = pkg.router('./db.json')
 const middlewares = pkg.defaults()
 
 server.use(middlewares)
+server.use(pkg.bodyParser)
 server.use((req, res, next) => {
-  const token = localStorage.getItem('accessToken')
-  if (token) { // isAuthorized(req) add your authorization logic here
+  // const token = localStorage.getItem('accessToken')
+  console.log('****req****: ', req)
+  if (req.method === 'POST') {
+    req.body.createdAt = Date.now()
+  }
+  // console.log('****res****: ', res)
+  if (req) { // isAuthorized(req) add your authorization logic here
+    console.log('****res****: ', res)
     next() // continue to JSON Server router
   } else {
     res.sendStatus(401)

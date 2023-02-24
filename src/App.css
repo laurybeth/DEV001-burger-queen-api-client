@@ -177,9 +177,6 @@ select {
   justify-content: right;
 }
 
-.order-item {
-  padding-bottom:2rem
-}
 .container-order-body{
   margin-top:1rem;
   background-color: #202222;
@@ -187,15 +184,45 @@ select {
   border-radius: 0.5rem;
 }
 
-.body-order-item {
+.container-select-table{
+  display: flex;
+  justify-content: right;
+margin: 1rem 0 2.5rem 1rem;
+}
+.container-select-table select{
+  background-image: url("./assets/icons/arrow.svg");
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-table{
+  color: #fcbf29;
+  font-family: "Patua One", cursive;
+  font-size: 1.3rem;
+  background-color: #202222;
+  border:#fcbf29 solid 1px;
+  width: 40%;
+  text-align: center;
+}
+.select-options{
+
+  font-size: 1rem;
+  font-weight: 100;
+}
+.container-order-item {
+  padding-bottom:2rem
+}
+
+.order-item-body {
 padding-bottom: 1rem;
 
 }
 
-.body-order-item-left-side{
+.order-item-body-left-side{
   width: 85%;
 }
-.body-order-item-right-side{
+.order-item-body-right-side{
   width: 15%
 }
 

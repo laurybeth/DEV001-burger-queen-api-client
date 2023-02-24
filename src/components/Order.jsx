@@ -14,15 +14,23 @@ export function Order () {
         </ul>
     </div>
     <div className='card-body container-order-body'>
+      <div className='container-select-table'>
+        <select className="form-select select-table form-select-sm">
+          <option defaultValue>Select table</option>
+          <option className='select-options' value="1">Table nº 1</option>
+          <option className='select-options' value="2">Table nº 2</option>
+          <option className='select-options' value="3">Table nº 3</option>
+        </select>
+      </div>
         {currentOrder.map((product) => (
       // eslint-disable-next-line react/jsx-key
-      <div className='card order-item'>
-        <div className="card-body body-product body-order-item">
-              <div className='body-product-left-side body-order-item-left-side'>
+      <div className='card container-order-item'>
+        <div className="card-body body-product order-item-body">
+              <div className='body-product-left-side order-item-body-left-side'>
                 <div className='product-text order-item-text'>{product.name}</div>
                 <div className='product-text product-description order-item-description'>{product.description}</div>
               </div>
-              <div className='body-product-right-side body-order-item-right-side'><img className='img-product' src={`${product.image}`} /></div>
+              <div className='body-product-right-side order-item-body-right-side'><img className='img-product' src={`${product.image}`} /></div>
         </div>
         <div className='card-footer'>
                 <div className='order-item-number container-order-item-price'>{product.price}</div>
