@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 export const OrderContext = createContext()
 
@@ -13,11 +13,9 @@ export function useOrderContext () {
 }
 
 export const OrderContextProvider = ({ children }) => {
-  // const [login, setLogin] = useState(false)
   const [currentOrder, setOrder] = useState([])
 
   const updateOrder = (newOrder) => {
-    // setOrder(currentOrder.push(newOrder))
     setOrder((prevOrder) => {
       return [
         ...prevOrder,
@@ -25,12 +23,27 @@ export const OrderContextProvider = ({ children }) => {
       ]
     })
   }
-  /*   const setLogged = (value) => {
-    setLogin(value)
+
+  const handleOrderItemQty = (id, amount) => {
+    console.log('amount: ', amount)
+    const productId = currentOrder.findIndex((element) =>
+      element.product.id === id)
+    setOrder((prevOrder) => {
+      prevOrder[productId].qty = amount
+      return [
+        ...prevOrder
+      ]
+    })
   }
- */
+
+  const handleOrderItemDelete = (id) => {
+    setOrder((prevOrder) => prevOrder.filter((element) =>
+      element.product.id !== id)
+    )
+  }
+
   return (
-    <OrderContext.Provider value={{ currentOrder, updateOrder }}>
+    <OrderContext.Provider value={{ currentOrder, updateOrder, handleOrderItemQty, handleOrderItemDelete }}>
       {children}
     </OrderContext.Provider>
   )

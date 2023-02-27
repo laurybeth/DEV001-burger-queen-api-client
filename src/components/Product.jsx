@@ -6,7 +6,7 @@ export function Product ({ id, name, description, price, image }) {
 
   function handleAdd (e) {
     e.preventDefault()
-    const order = { id, name, description, price, image }
+    const order = { qty: 1, product: { id, name, description, price, image } }
     updateOrder(order)
   }
 

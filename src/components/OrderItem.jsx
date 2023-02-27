@@ -1,22 +1,33 @@
 import React, { useState } from 'react'
+import { useOrderContext } from '../contexts/OrderContextProvider'
 
 export function OrderItem ({ id, name, description, price, image }) {
   const [amount, setAmount] = useState(1)
+  const { handleOrderItemQty, handleOrderItemDelete } = useOrderContext()
 
-  function handdleDeleteItem () {
-
+  function handdleDeleteItem (e) {
+    e.preventDefault()
+    handleOrderItemDelete(id)
   }
 
-  function handdleDecrease () {
+  function handdleDecrease (e) {
+    e.preventDefault()
+    const value = amount - 1
     setAmount((amount) => {
       if (amount === 1) {
         return amount
-      } else { return amount - 1 }
+      } else { return value }
     })
+    console.log('-amount in orderItem: ', amount)
+    handleOrderItemQty(id, amount)
   }
 
-  function handdleIncrease () {
-    setAmount((amount) => amount + 1)
+  function handdleIncrease (e) {
+    e.preventDefault()
+    const value = amount + 1
+    setAmount(value)
+    console.log('+amount in orderItem: ', amount)
+    handleOrderItemQty(id, amount)
   }
 
   return (
