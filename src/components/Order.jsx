@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { OrderItem } from './OrderItem'
 import { useOrderContext } from '../contexts/OrderContextProvider'
 
 export function Order () {
   // const { currentORder, upddateOrder } = useContext(OrderContext)
   const [table, setTable] = useState()
+  const [total, setTotal] = useState(0)
   const { currentOrder } = useOrderContext()
+
+  useEffect(() => setTotal(() =>
+    currentOrder.reduce((a, c) =>
+      (a + c.product.price * c.qty)
+    , 0))
+  )
 
   function handleSelected (e) {
     const selected = e.target.value
@@ -48,7 +55,6 @@ export function Order () {
                     key={item.product.id}
                     id={item.product.id}
                     name={item.product.name}
-                    description={item.product.description}
                     image={item.product.image}
                     price={item.product.price}
                   />

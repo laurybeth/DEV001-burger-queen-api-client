@@ -20,7 +20,7 @@ export function Product ({ id, name, description, price, image }) {
       <div className='body-product-right-side'><img className='img-product' alt='product image' src={`${image}`}/></div>
      </div>
      <div className='card-footer body-product'>
-      <div className='product-text container-product-price'>{price}</div>
+      <div className='product-text container-product-price'>$ {price}.00</div>
       <div className='product-text container-product-add'>
         <a href="#"><img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd}></img></a>
       </div>

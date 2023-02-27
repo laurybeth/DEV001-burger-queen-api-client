@@ -55,7 +55,7 @@
     {
       "name": "American coffee",
       "description": "Coffee consisting of exactly equal parts of espresso and water.",
-      "price": "$ 5.00",
+      "price": 5,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg",
       "type": "Breakfast",
       "dataEntry": "20/02/23",
@@ -64,7 +64,7 @@
     {
       "name": "Latte",
       "description": "Coffee with milk.",
-      "price": "$ 7.00",
+      "price": 7,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg",
       "type": "Breakfast",
       "dataEntry": "20/02/23",
@@ -73,7 +73,7 @@
     {
       "name": "Sandwich",
       "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread.",
-      "price": "$ 10.00",
+      "price": 10,
       "image": "https://github.com/laurybeth/DEV001-burger-queen-api-client/blob/hu2/src/assets/products/sandwich.jpg?raw=true",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
@@ -82,7 +82,7 @@
     {
       "name": "Orange juice",
       "description": "Natural orange juice.",
-      "price": "$ 7.00",
+      "price": 7,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/juice.jpg",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
@@ -91,7 +91,7 @@
     {
       "name": "Plain burger",
       "description": "Ground beef burger.",
-      "price": "$ 10.00",
+      "price": 10,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/hamburger1.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
@@ -100,7 +100,7 @@
     {
       "name": "Double burger",
       "description": "Brioche bread accompanied by double hamburger 200 gr. 100% meat, double dambo cheese, tomato lettuce and special sauce.",
-      "price": "$ 15.00",
+      "price": 15,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/hamburger2.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
@@ -109,7 +109,7 @@
     {
       "name": "French fries",
       "description": "Portion of fries.",
-      "price": "$ 5.00",
+      "price": 5,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/patatas.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
@@ -118,7 +118,7 @@
     {
       "name": "Onion rings",
       "description": "Sliced onions that are dipped in a batter, and deep fried until crisp.",
-      "price": "$ 5.00",
+      "price": 5,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/onions.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
@@ -127,7 +127,7 @@
     {
       "name": "Soda",
       "description": "750 ml",
-      "price": "$ 10.00",
+      "price": 10,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/soda.jpg",
       "type": "Dinner",
       "dataEntry": "21/02/2023",
@@ -136,7 +136,7 @@
     {
       "name": "Water",
       "description": "750 ml",
-      "price": "$ 7.00",
+      "price": 7,
       "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/water.jpg",
       "type": "Breakfast",
       "dataEntry": "21/02/2023",
