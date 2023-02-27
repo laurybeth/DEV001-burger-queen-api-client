@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { OrderItem } from './OrderItem'
 import { useOrderContext } from '../contexts/OrderContextProvider'
+import { httpRequest } from '../fetch-api/httpRequest'
+import { toast } from 'react-toastify'
 
 export function Order () {
   // const { currentORder, upddateOrder } = useContext(OrderContext)
@@ -19,7 +21,7 @@ export function Order () {
     setTable(selected)
   }
 
-  function handleSend (e) {
+  async function handleSend (e) {
     e.preventDefault()
     const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const currentUserID = currentUser.id
@@ -27,6 +29,15 @@ export function Order () {
     const dataEntry = new Date()
     const order = { userId: currentUserID, client: table, products: currentOrder, status, dataEntry }
     console.log(order)
+
+    const response = await httpRequest().post('http://localhost:8080/orders', {
+      body: order
+    })
+    if (response.error) {
+      toast.error('Ups! Something happened')
+    } else {
+      toast.success('The order was sent')
+    }
   }
 
   return (
