@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/UserPanel.jsx</title>
+    <title>Code coverage report for src/api/server.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> UserPanel.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/api</a> server.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -88,10 +88,8 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -101,43 +99,48 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { useNavigate } from 'react-router-dom'
-// import { useAuthContext } from '../contexts/AuthContextProvider'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import pkg from 'json-server'
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >UserPanel </span>() {
-  const link = <span class="cstat-no" title="statement not covered" >useNavigate()</span>
-  const currentUser = <span class="cstat-no" title="statement not covered" >JSON.parse(localStorage.getItem('currentUser'))</span>
-  const userEmail = <span class="cstat-no" title="statement not covered" >currentUser.email</span>
-  function <span class="fstat-no" title="function not covered" >logout </span>(e) {
-<span class="cstat-no" title="statement not covered" >    e.preventDefault()</span>
-<span class="cstat-no" title="statement not covered" >    localStorage.clear()</span>
-<span class="cstat-no" title="statement not covered" >    link('/')</span>
-    /*     currentUser = JSON.parse(localStorage.getItem('user'))
-    console.log('holaaa', currentUser) */
+const server = <span class="cstat-no" title="statement not covered" >pkg.create()</span>
+const router = <span class="cstat-no" title="statement not covered" >pkg.router('./src/api/db.json')</span>
+const middlewares = <span class="cstat-no" title="statement not covered" >pkg.defaults()</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >server.use(middlewares)</span>
+<span class="cstat-no" title="statement not covered" >server.use(pkg.bodyParser)</span>
+<span class="cstat-no" title="statement not covered" >server.use(<span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {</span>
+  // const token = localStorage.getItem('accessToken')
+<span class="cstat-no" title="statement not covered" >  console.log('****req****: ', req)</span>
+<span class="cstat-no" title="statement not covered" >  if (req.method === 'POST') {</span>
+<span class="cstat-no" title="statement not covered" >    req.body.createdAt = Date.now()</span>
   }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;div className="card-footer text-muted user-panel" data-testid='footer-element'&gt;
-    &lt;div className='footer-text user-panel-text' &gt;User: {userEmail}
-    &lt;/div&gt;
-    &lt;div&gt;&lt;a href='#' onClick={logout}&gt;&lt;img src ='./src/assets/icons/logout.svg' alt='logout' &gt;&lt;/img&gt;&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  )
-}
+  // console.log('****res****: ', res)
+<span class="cstat-no" title="statement not covered" >  if (req) { // isAuthorized(req) add your authorization logic here</span>
+<span class="cstat-no" title="statement not covered" >    console.log('****res****: ', res)</span>
+<span class="cstat-no" title="statement not covered" >    next() </span>// continue to JSON Server router
+  } else {
+<span class="cstat-no" title="statement not covered" >    res.sendStatus(401)</span>
+  }
+})
+<span class="cstat-no" title="statement not covered" >server.use(router)</span>
+<span class="cstat-no" title="statement not covered" >server.listen(8080, <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('JSON Server is running')</span>
+})
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

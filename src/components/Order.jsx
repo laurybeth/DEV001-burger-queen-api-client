@@ -5,7 +5,7 @@ import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
 
 export function Order () {
-  // const { currentORder, upddateOrder } = useContext(OrderContext)
+  const accessToken = localStorage.getItem('accessToken')
   const [table, setTable] = useState()
   const [total, setTotal] = useState(0)
   const { currentOrder } = useOrderContext()
@@ -31,7 +31,8 @@ export function Order () {
     console.log(order)
 
     const response = await httpRequest().post('http://localhost:8080/orders', {
-      body: order
+      body: order,
+      Authorization: `Bearer ${accessToken}`
     })
     if (response.error) {
       toast.error('Ups! Something happened')

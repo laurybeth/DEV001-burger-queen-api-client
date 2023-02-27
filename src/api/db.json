@@ -144,44 +144,6 @@
     }
   ],
   "orders": [
-    {
-      "userId": 1,
-      "client": "Table nº 3",
-      "products": [
-        {
-          "qty": 1,
-          "product": {
-            "id": 1,
-            "name": "American coffee",
-            "description": "Coffee consisting of exactly equal parts of espresso and water.",
-            "price": 5,
-            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg"
-          }
-        },
-        {
-          "qty": 1,
-          "product": {
-            "id": 2,
-            "name": "Latte",
-            "description": "Coffee with milk.",
-            "price": 7,
-            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
-          }
-        },
-        {
-          "qty": 1,
-          "product": {
-            "id": 3,
-            "name": "Sandwich",
-            "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread.",
-            "price": 10,
-            "image": "https://github.com/laurybeth/DEV001-burger-queen-api-client/blob/hu2/src/assets/products/sandwich.jpg?raw=true"
-          }
-        }
-      ],
-      "status": "pending",
-      "dataEntry": "2023-02-27T17:48:05.486Z",
-      "id": 1
-    }
+   
   ]
 }

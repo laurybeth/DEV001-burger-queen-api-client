@@ -89,7 +89,8 @@ select {
   --bs-btn-hover-bg: #b83b2b;
   --bs-btn-hover-border-color: #a43325;
 }
-.waiter-page-body{
+
+.waiter-page-body {
   align-items: flex-start;
 }
 
@@ -97,7 +98,6 @@ select {
   background-color: #0000;
   width: 50%;
 }
-
 
 .container-nav {
   --bs-nav-link-hover-color: #fff;
@@ -111,7 +111,7 @@ select {
   color: #fff;
   font-family: "Patua One", cursive;
   font-size: 1.4rem;
-  position: relative;  
+  position: relative;
 }
 
 .nav-text:focus::after,
@@ -134,20 +134,19 @@ select {
 
 .body-product {
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   width: 100%;
 }
 
 .body-product-left-side {
-  width: 65%;  
-  margin-right:0.8rem;
+  width: 65%;
+  margin-right: 0.8rem;
 }
 
 .body-product-right-side {
   width: 35%;
   display: flex;
   justify-content: right;
-
 }
 
 .product-text {
@@ -177,96 +176,94 @@ select {
   justify-content: right;
 }
 
-.container-order-body{
-  margin-top:1rem;
+.container-order-body {
+  margin-top: 1rem;
   background-color: #202222;
   border: #fcbf29 solid 1px;
   border-radius: 0.5rem;
 }
 
-.container-select-table{
-margin: 1rem 0 2.5rem 1rem;
-}
-.container-select-table select{
-  background-image: url("./assets/icons/arrow.svg");
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+.container-select-table {
+  margin: 1rem 0 2.5rem 1rem;
 }
 
-.select-table{
+.container-select-table select {
+  background-image: url("./assets/icons/arrow.svg");
+  appearance: none;
+}
+
+.select-table {
   color: #fcbf29;
   font-family: "Patua One", cursive;
   font-size: 1.3rem;
   background-color: #202222;
-  border:#fcbf29 solid 1px;
+  border: #fcbf29 solid 1px;
   text-align: center;
 }
-.select-options{
 
+.select-options {
   font-size: 1.1rem;
   font-weight: 100;
 }
+
 .container-order-item {
-  padding-bottom:2rem
+  padding-bottom: 2rem;
 }
 
 .order-item-body {
-padding-bottom: 1rem;
-
+  padding-bottom: 1rem;
 }
 
-.order-item-body-left-side{
+.order-item-body-left-side {
   width: 85%;
 }
-.order-item-body-right-side{
-  width: 15%
+
+.order-item-body-right-side {
+  width: 15%;
 }
 
-.order-item-text{
-font-size: 1.1rem;
-
+.order-item-text {
+  font-size: 1.1rem;
 }
 
-.order-item-description{
+.order-item-description {
   font-size: 0.8rem;
-  }
-.order-item-number{
+}
+
+.order-item-number {
   color: #fcbf29;
   font-weight: 700;
   font-size: 1.2rem;
-  
 }
-.container-order-item-price{
-width: 50%;
 
+.container-order-item-price {
+  width: 50%;
 }
- .container-order-item-amount {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-  }
+.container-order-item-amount {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .container-order-item-count {
-    border: #fcbf29 1px solid;
-    border-radius: 1.8rem;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.container-order-item-count {
+  border: #fcbf29 1px solid;
+  border-radius: 1.8rem;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .container-total {
-    color: #fcbf29;
-    font-family: "Patua One", cursive;
-    font-size: 1.9rem;
-    margin: 4rem 1rem 2rem 1rem;
-    display: flex;
-    justify-content: space-between;
-  
-  }
+.container-total {
+  color: #fcbf29;
+  font-family: "Patua One", cursive;
+  font-size: 1.9rem;
+  margin: 4rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
 
 .card-footer {
   display: flex;
