@@ -18,16 +18,14 @@ export function OrderItem ({ id, name, price, image }) {
         return amount
       } else { return value }
     })
-    console.log('-amount in orderItem: ', amount)
-    handleOrderItemQty(id, amount)
+    handleOrderItemQty(id, value)
   }
 
   function handdleIncrease (e) {
     e.preventDefault()
     const value = amount + 1
     setAmount(value)
-    console.log('+amount in orderItem: ', amount)
-    handleOrderItemQty(id, amount)
+    handleOrderItemQty(id, value)
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
 export const OrderContext = createContext()
 
@@ -25,7 +25,6 @@ export const OrderContextProvider = ({ children }) => {
   }
 
   const handleOrderItemQty = (id, amount) => {
-    console.log('amount: ', amount)
     const productId = currentOrder.findIndex((element) =>
       element.product.id === id)
     setOrder((prevOrder) => {
