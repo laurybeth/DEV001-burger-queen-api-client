@@ -1,7 +1,6 @@
-
 import React from 'react'
 import { Home } from './pages/Home'
-import { WaiterPanel } from './pages//WaiterPanel'
+import { Waiter } from './pages//Waiter'
 import { Route, Routes } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
@@ -14,8 +13,8 @@ function router () {
     <>
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path="/waiterPanel" element={<PrivateRoute isLoggedIn={currentUser && currentUser.roles.waiter}>
-        <WaiterPanel /></PrivateRoute>}/>
+      <Route path="/waiter" element={<PrivateRoute isLoggedIn={currentUser && currentUser.roles.waiter}>
+        <Waiter /></PrivateRoute>}/>
     </Routes>
     <ToastContainer
         position="bottom-left"

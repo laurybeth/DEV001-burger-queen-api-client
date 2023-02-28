@@ -27,16 +27,17 @@ export function Login () {
       })
       // console.log(response.error)
       // mensaje de error
+      const currentUser = response.user
       if (Object.prototype.hasOwnProperty.call(response, 'error')) {
         toast.error('Wrong email or password')
       } else {
         const token = response.accessToken
-        const currentUser = response.user
+
         localStorage.setItem('accessToken', token)
         localStorage.setItem('currentUser', JSON.stringify(response.user))
         toast.success('Success')
         if (currentUser.roles.waiter) {
-          link('/waiterPanel')
+          link('/waiter')
         }
         /*       const currentUser = [...response, response.accessToken]
         AuthContext.updateUser(currentUser) */

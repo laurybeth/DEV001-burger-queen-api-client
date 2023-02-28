@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/pages/Home.jsx</title>
+    <title>Code coverage report for src/pages/Waiter.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/pages</a> Home.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/pages</a> Waiter.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -92,12 +92,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,23 +110,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { Login } from '../components/Login'
+import { Menu } from '../components/Menu'
+import { UserPanel } from '../components/UserPanel'
+import { Order } from '../components/Order'
+import { OrderContextProvider } from '../contexts/OrderContextProvider'
 &nbsp;
-export function Home () {
-  const e =
-  &lt;div className="card-footer text-muted" data-testid='footer-element'&gt;
-  &lt;div className='footer-text'&gt;Copyright © 2023 Burger Queen
-    &lt;/div&gt;
-  &lt;/div&gt;
-&nbsp;
+export function Waiter () {
   return (
-    &lt;div className="card page-container"&gt;
-      &lt;Header/&gt;
-      &lt;div className="card-body page-body"&gt;
-       &lt;Login/&gt;
+    &lt;OrderContextProvider&gt;
+      &lt;div className='card page-container'&gt;
+        &lt;Header/&gt;
+        &lt;div className="card-body page-body waiter-page-body"&gt;
+          &lt;Menu/&gt;
+          &lt;Order/&gt;
+        &lt;/div&gt;
+        &lt;Footer element = { &lt;UserPanel/&gt; }/&gt;
       &lt;/div&gt;
-      &lt;Footer element = {e}/&gt;
-    &lt;/div&gt;
+    &lt;/OrderContextProvider&gt;
   )
 }
 &nbsp;</pre></td></tr></table></pre>

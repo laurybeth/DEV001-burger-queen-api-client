@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -116,7 +116,26 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,6 +145,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,6 +207,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react'
 import { useOrderContext } from '../contexts/OrderContextProvider'
+import Swal from 'sweetalert2'
 &nbsp;
 export function <span class="fstat-no" title="function not covered" >OrderItem </span>({ id, name, price, image }) {
   const [amount, setAmount] = <span class="cstat-no" title="statement not covered" >useState(1)</span>
@@ -178,7 +215,24 @@ export function <span class="fstat-no" title="function not covered" >OrderItem <
 &nbsp;
   function <span class="fstat-no" title="function not covered" >handdleDeleteItem </span>(e) {
 <span class="cstat-no" title="statement not covered" >    e.preventDefault()</span>
-<span class="cstat-no" title="statement not covered" >    handleOrderItemDelete(id)</span>
+<span class="cstat-no" title="statement not covered" >    Swal.fire({</span>
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then(<span class="fstat-no" title="function not covered" >(r</span>esult) =&gt; {
+<span class="cstat-no" title="statement not covered" >      if (result.isConfirmed) {</span>
+<span class="cstat-no" title="statement not covered" >        handleOrderItemDelete(id)</span>
+<span class="cstat-no" title="statement not covered" >        Swal.fire(</span>
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
   }
 &nbsp;
   function <span class="fstat-no" title="function not covered" >handdleDecrease </span>(e) {
@@ -211,11 +265,11 @@ export function <span class="fstat-no" title="function not covered" >OrderItem <
             &lt;div className='order-item-number container-order-item-price'&gt;$ {price}.00&lt;/div&gt;
             &lt;div className='order-item-text container-order-item-amount'&gt;
                 &lt;div className='order-item-number container-order-item-count'&gt;
-                &lt;a href="#" onClick={handdleDecrease}&gt;&lt;img src='./src/assets/icons/minus.svg'&gt;&lt;/img&gt;&lt;/a&gt;{amount}
-                &lt;a href="#" onClick={handdleIncrease}&gt;&lt;img src='./src/assets/icons/plus.svg'&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;img src='./src/assets/icons/minus.svg'onClick={handdleDecrease}&gt;&lt;/img&gt;{amount}
+                &lt;img src='./src/assets/icons/plus.svg' onClick={handdleIncrease}&gt;&lt;/img&gt;
                 &lt;/div&gt;
-                &lt;div&gt;
-                &lt;a href="#" onClick={handdleDeleteItem}&gt;&lt;img src='./src/assets/icons/trash.svg'&gt;&lt;/img&gt;&lt;/a&gt;
+                &lt;div className='container-trash'&gt;
+                &lt;img src='./src/assets/icons/trash.svg' onClick={handdleDeleteItem}&gt;&lt;/img&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
     &lt;/div&gt;
@@ -229,7 +283,7 @@ export function <span class="fstat-no" title="function not covered" >OrderItem <
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-27T17:57:36.056Z
+                at 2023-02-28T21:30:11.115Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

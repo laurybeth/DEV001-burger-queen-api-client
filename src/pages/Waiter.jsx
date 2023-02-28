@@ -6,7 +6,7 @@ import { UserPanel } from '../components/UserPanel'
 import { Order } from '../components/Order'
 import { OrderContextProvider } from '../contexts/OrderContextProvider'
 
-export function WaiterPanel () {
+export function Waiter () {
   return (
     <OrderContextProvider>
       <div className='card page-container'>

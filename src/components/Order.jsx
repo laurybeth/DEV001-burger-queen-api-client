@@ -12,7 +12,7 @@ export function Order () {
   const { currentOrder, resetOrder } = useOrderContext()
   const currentUser = JSON.parse(localStorage.getItem('currentUser'))
   const accessToken = localStorage.getItem('accessToken')
-
+  console.log(currentUser)
   useEffect(() => setTotal(() =>
     currentOrder.reduce((a, c) =>
       (a + c.product.price * c.qty)
