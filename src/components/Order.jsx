@@ -3,14 +3,15 @@ import { OrderItem } from './OrderItem'
 import { useOrderContext } from '../contexts/OrderContextProvider'
 import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
+import Swal from 'sweetalert2'
 
 export function Order () {
-  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
-  const accessToken = localStorage.getItem('accessToken')
   const [table, setTable] = useState('')
   const [total, setTotal] = useState(0)
   const [errorMessage, setErrorMessage] = useState('')
-  const { currentOrder } = useOrderContext()
+  const { currentOrder, resetOrder } = useOrderContext()
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
+  const accessToken = localStorage.getItem('accessToken')
 
   useEffect(() => setTotal(() =>
     currentOrder.reduce((a, c) =>
@@ -45,7 +46,14 @@ export function Order () {
       if (response.error) {
         toast.error('Ups! Something happened')
       } else {
-        toast.success('The order was sent')
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'The order was sent',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        resetOrder()
       }
     }
   }
@@ -61,7 +69,7 @@ export function Order () {
     </div>
     <div className='card-body container-order-body'>
       <div className='container-select-table'>
-        <select className="form-select select-table form-select-sm" onClick={handleSelected}>
+        <select className="form-select select-table form-select-sm add-product-svg" onClick={handleSelected} >
           <option defaultValue>Select the table</option>
           <option className='select-options' value="Table nº 1" name='Table nº 1'>Table nº 1</option>
           <option className='select-options' value="Table nº 2" name='Table nº 2'>Table nº 2</option>

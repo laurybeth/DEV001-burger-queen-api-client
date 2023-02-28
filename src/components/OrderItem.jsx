@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useOrderContext } from '../contexts/OrderContextProvider'
+import Swal from 'sweetalert2'
 
 export function OrderItem ({ id, name, price, image }) {
   const [amount, setAmount] = useState(1)
@@ -7,7 +8,24 @@ export function OrderItem ({ id, name, price, image }) {
 
   function handdleDeleteItem (e) {
     e.preventDefault()
-    handleOrderItemDelete(id)
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        handleOrderItemDelete(id)
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
   }
 
   function handdleDecrease (e) {

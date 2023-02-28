@@ -174,7 +174,7 @@ select {
   width: 20%;
   display: flex;
   justify-content: right;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .container-order-body {
@@ -185,7 +185,7 @@ select {
 }
 
 .container-select-table {
-  margin: 1rem 0 2.5rem 1rem;
+  margin: 1rem 0 2.5rem;
 }
 
 .container-select-table select {
@@ -255,11 +255,11 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.container-trash{
-  cursor:pointer;
+.container-trash {
+  cursor: pointer;
 }
 
 .container-total {
@@ -270,6 +270,7 @@ select {
   display: flex;
   justify-content: space-between;
 }
+
 .card-footer {
   display: flex;
   align-items: center;

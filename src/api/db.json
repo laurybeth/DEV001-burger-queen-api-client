@@ -144,6 +144,149 @@
     }
   ],
   "orders": [
-   
+    {
+      "userId": 1,
+      "client": "Table nº 3",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T00:24:11.010Z",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "client": "Table nº 3",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        },
+        {
+          "qty": 1,
+          "product": {
+            "id": 1,
+            "name": "American coffee",
+            "description": "Coffee consisting of exactly equal parts of espresso and water.",
+            "price": 5,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T00:26:19.811Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "client": "Table nº 3",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T00:33:22.882Z",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "client": "Table nº 2",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 1,
+            "name": "American coffee",
+            "description": "Coffee consisting of exactly equal parts of espresso and water.",
+            "price": 5,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/americanCoffee.jpg"
+          }
+        },
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T00:34:50.153Z",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "client": "Table nº 2",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        },
+        {
+          "qty": 1,
+          "product": {
+            "id": 3,
+            "name": "Sandwich",
+            "description": "Sandwich with ham and yellow cheese​ inside two slices of sandwich bread.",
+            "price": 10,
+            "image": "https://github.com/laurybeth/DEV001-burger-queen-api-client/blob/hu2/src/assets/products/sandwich.jpg?raw=true"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T00:39:19.162Z",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "client": "Table nº 3",
+      "products": [
+        {
+          "qty": 1,
+          "product": {
+            "id": 2,
+            "name": "Latte",
+            "description": "Coffee with milk.",
+            "price": 7,
+            "image": "https://raw.githubusercontent.com/laurybeth/DEV001-burger-queen-api-client/hu2/src/assets/products/latte.jpg"
+          }
+        }
+      ],
+      "status": "pending",
+      "dataEntry": "2023-02-28T02:54:18.573Z",
+      "id": 6
+    }
   ]
 }

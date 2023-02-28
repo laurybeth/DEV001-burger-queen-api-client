@@ -16,13 +16,29 @@ export function Product ({ id, name, description, price, image }) {
     return () => { window.removeEventListener('click', prueba) }
   }, []) */
 
+  useEffect(() => {
+    const clearErrorMessage = (e) => {
+      const classList = Array.from(e.target.classList)
+      const isAddSvg = classList.includes('add-product-svg')
+      const isErrorMessage = classList.includes('error-message')
+      const isOther = !isAddSvg && !isErrorMessage
+      if (isOther) {
+        setErrorMessage('')
+      }
+    }
+
+    window.addEventListener('click', clearErrorMessage)
+
+    return () => window.removeEventListener('click', clearErrorMessage)
+  }, [])
+
   function handleAdd (e) {
     e.preventDefault()
     const productId = currentOrder.findIndex((element) =>
       element.product.id === id)
     if (productId !== -1) {
       setErrorMessage('Already added to order.')
-      setTimeout(() => { setErrorMessage('') }, 1500)
+      // setTimeout(() => { setErrorMessage('') }, 1500)
     } else {
       const order = { qty: 1, product: { id, name, description, price, image } }
       updateOrder(order)
@@ -41,7 +57,7 @@ export function Product ({ id, name, description, price, image }) {
      <div className='card-footer body-product'>
       <div className='product-text container-product-price'>$ {price}.00</div>
       <div className='product-text container-product-add'>
-        <img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd} ></img>
+        <img src='./src/assets/icons/add.svg' alt='add product' className='add-product-svg' onClick={handleAdd} ></img>
       </div>
      </div>
      <div className='container-error'><label className='error-message'>{errorMessage}

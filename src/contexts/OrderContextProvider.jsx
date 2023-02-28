@@ -15,6 +15,8 @@ export function useOrderContext () {
 export const OrderContextProvider = ({ children }) => {
   const [currentOrder, setOrder] = useState([])
 
+  const resetOrder = () => setOrder([])
+
   const updateOrder = (newOrder) => {
     setOrder((prevOrder) => {
       return [
@@ -42,7 +44,7 @@ export const OrderContextProvider = ({ children }) => {
   }
 
   return (
-    <OrderContext.Provider value={{ currentOrder, updateOrder, handleOrderItemQty, handleOrderItemDelete }}>
+    <OrderContext.Provider value={{ currentOrder, resetOrder, updateOrder, handleOrderItemQty, handleOrderItemDelete }}>
       {children}
     </OrderContext.Provider>
   )
