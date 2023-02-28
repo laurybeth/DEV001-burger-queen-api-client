@@ -5,9 +5,11 @@ import { httpRequest } from '../fetch-api/httpRequest'
 import { toast } from 'react-toastify'
 
 export function Order () {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'))
   const accessToken = localStorage.getItem('accessToken')
-  const [table, setTable] = useState()
+  const [table, setTable] = useState('')
   const [total, setTotal] = useState(0)
+  const [errorMessage, setErrorMessage] = useState('')
   const { currentOrder } = useOrderContext()
 
   useEffect(() => setTotal(() =>
@@ -23,21 +25,28 @@ export function Order () {
 
   async function handleSend (e) {
     e.preventDefault()
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
-    const currentUserID = currentUser.id
-    const status = 'pending'
-    const dataEntry = new Date()
-    const order = { userId: currentUserID, client: table, products: currentOrder, status, dataEntry }
-    console.log(order)
 
-    const response = await httpRequest().post('http://localhost:8080/orders', {
-      body: order,
-      Authorization: `Bearer ${accessToken}`
-    })
-    if (response.error) {
-      toast.error('Ups! Something happened')
+    if ((table === '') || (table === 'Select the table')) {
+      setErrorMessage('Select the table number')
+      setTimeout(() => { setErrorMessage('') }, 1500)
+    } else if (currentOrder.length === 0) {
+      setErrorMessage('No products in the order')
+      setTimeout(() => { setErrorMessage('') }, 1500)
     } else {
-      toast.success('The order was sent')
+      const currentUserID = currentUser.id
+      const status = 'pending'
+      const dataEntry = new Date()
+      const order = { userId: currentUserID, client: table, products: currentOrder, status, dataEntry }
+
+      const response = await httpRequest().post('http://localhost:8080/orders', {
+        body: order,
+        Authorization: `Bearer ${accessToken}`
+      })
+      if (response.error) {
+        toast.error('Ups! Something happened')
+      } else {
+        toast.success('The order was sent')
+      }
     }
   }
 
@@ -52,8 +61,8 @@ export function Order () {
     </div>
     <div className='card-body container-order-body'>
       <div className='container-select-table'>
-        <select className="form-select select-table form-select-sm" onChange={handleSelected}>
-          <option defaultValue>Select table</option>
+        <select className="form-select select-table form-select-sm" onClick={handleSelected}>
+          <option defaultValue>Select the table</option>
           <option className='select-options' value="Table nº 1" name='Table nº 1'>Table nº 1</option>
           <option className='select-options' value="Table nº 2" name='Table nº 2'>Table nº 2</option>
           <option className='select-options' value="Table nº 3" name='Table nº 3'>Table nº 3</option>
@@ -61,6 +70,7 @@ export function Order () {
           <option className='select-options' value="Table nº 5" name='Table nº 5'>Table nº 5</option>
         </select>
       </div>
+
         {currentOrder.map((item) => {
           return (
                   <OrderItem
@@ -72,12 +82,15 @@ export function Order () {
                   />
           )
         })}
+
       <div className='container-total'><span>Total
         </span>
         <span>$ {total}.00
           </span>
       </div>
       <div className="d-grid gap-3 col-12 mx-auto">
+        <div className='container-error'><label className='error-message'>{errorMessage}
+       </label></div>
         <button className="btn btn-primary btn-lg btn-login" onClick={handleSend}>Send to Kitchen
         </button>
       </div>

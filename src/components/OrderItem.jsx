@@ -40,11 +40,11 @@ export function OrderItem ({ id, name, price, image }) {
             <div className='order-item-number container-order-item-price'>$ {price}.00</div>
             <div className='order-item-text container-order-item-amount'>
                 <div className='order-item-number container-order-item-count'>
-                <a href="#" onClick={handdleDecrease}><img src='./src/assets/icons/minus.svg'></img></a>{amount}
-                <a href="#" onClick={handdleIncrease}><img src='./src/assets/icons/plus.svg'></img></a>
+                <img src='./src/assets/icons/minus.svg'onClick={handdleDecrease}></img>{amount}
+                <img src='./src/assets/icons/plus.svg' onClick={handdleIncrease}></img>
                 </div>
-                <div>
-                <a href="#" onClick={handdleDeleteItem}><img src='./src/assets/icons/trash.svg'></img></a>
+                <div className='container-trash'>
+                <img src='./src/assets/icons/trash.svg' onClick={handdleDeleteItem}></img>
                 </div>
             </div>
     </div>

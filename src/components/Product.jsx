@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useOrderContext } from '../contexts/OrderContextProvider'
 
 export function Product ({ id, name, description, price, image }) {
-  const { updateOrder } = useOrderContext()
+  const { currentOrder, updateOrder } = useOrderContext()
+  const [errorMessage, setErrorMessage] = useState(null)
+
+  /*   useEffect(() => {
+    function prueba (e) {
+      console.log(e.target.localName)
+      if (e.target.localName !== 'img') {
+        setErrorMessage('')
+      }
+    }
+    window.addEventListener('click', prueba)
+    return () => { window.removeEventListener('click', prueba) }
+  }, []) */
 
   function handleAdd (e) {
     e.preventDefault()
-    const order = { qty: 1, product: { id, name, description, price, image } }
-    updateOrder(order)
+    const productId = currentOrder.findIndex((element) =>
+      element.product.id === id)
+    if (productId !== -1) {
+      setErrorMessage('Already added to order.')
+      setTimeout(() => { setErrorMessage('') }, 1500)
+    } else {
+      const order = { qty: 1, product: { id, name, description, price, image } }
+      updateOrder(order)
+    }
+  }
+  function handleBlur () {
+    setErrorMessage('')
   }
 
   return (
@@ -22,9 +44,11 @@ export function Product ({ id, name, description, price, image }) {
      <div className='card-footer body-product'>
       <div className='product-text container-product-price'>$ {price}.00</div>
       <div className='product-text container-product-add'>
-        <a href="#"><img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd}></img></a>
+        <img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd} ></img>
       </div>
      </div>
+     <div className='container-error'><label className='error-message'onBlur={handleBlur}>{errorMessage}
+       </label></div>
     </div>
   )
 }
