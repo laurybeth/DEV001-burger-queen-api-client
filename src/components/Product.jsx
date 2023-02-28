@@ -28,9 +28,6 @@ export function Product ({ id, name, description, price, image }) {
       updateOrder(order)
     }
   }
-  function handleBlur () {
-    setErrorMessage('')
-  }
 
   return (
     <div className='card container-product'>
@@ -47,7 +44,7 @@ export function Product ({ id, name, description, price, image }) {
         <img src='./src/assets/icons/add.svg' alt='add product' onClick={handleAdd} ></img>
       </div>
      </div>
-     <div className='container-error'><label className='error-message'onBlur={handleBlur}>{errorMessage}
+     <div className='container-error'><label className='error-message'>{errorMessage}
        </label></div>
     </div>
   )
